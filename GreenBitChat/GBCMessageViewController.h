@@ -1,5 +1,5 @@
 //
-//  GBCFirstViewController.h
+//  GBCMessageViewController.h
 //  GreenBitChat
 //
 //  Created by L on 10/16/13.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface GBCFirstViewController : UIViewController
+@interface GBCMessageViewController : UIViewController
 
 @end

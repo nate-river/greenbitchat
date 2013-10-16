@@ -1,5 +1,5 @@
 //
-//  GBCSecondViewController.h
+//  GBCContactsViewController.h
 //  GreenBitChat
 //
 //  Created by L on 10/16/13.
@@ -8,6 +8,5 @@
 
 #import <UIKit/UIKit.h>
 
-@interface GBCSecondViewController : UIViewController
-
+@interface GBCContactsViewController : UIViewController <UITableViewDataSource,UITableViewDelegate>
 @end

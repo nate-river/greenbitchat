@@ -14,8 +14,8 @@
 		0B3964E4180E6A9200AEA17A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B3964E3180E6A9200AEA17A /* main.m */; };
 		0B3964E8180E6A9200AEA17A /* GBCAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B3964E7180E6A9200AEA17A /* GBCAppDelegate.m */; };
 		0B3964EB180E6A9200AEA17A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B3964E9180E6A9200AEA17A /* Main.storyboard */; };
-		0B3964EE180E6A9200AEA17A /* GBCFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B3964ED180E6A9200AEA17A /* GBCFirstViewController.m */; };
-		0B3964F1180E6A9200AEA17A /* GBCSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B3964F0180E6A9200AEA17A /* GBCSecondViewController.m */; };
+		0B3964EE180E6A9200AEA17A /* GBCMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B3964ED180E6A9200AEA17A /* GBCMessageViewController.m */; };
+		0B3964F1180E6A9200AEA17A /* GBCContactsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B3964F0180E6A9200AEA17A /* GBCContactsViewController.m */; };
 		0B3964F3180E6A9200AEA17A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B3964F2180E6A9200AEA17A /* Images.xcassets */; };
 		0B3964FA180E6A9200AEA17A /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B3964F9180E6A9200AEA17A /* XCTest.framework */; };
 		0B3964FB180E6A9200AEA17A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B3964D7180E6A9200AEA17A /* Foundation.framework */; };
@@ -46,10 +46,10 @@
 		0B3964E6180E6A9200AEA17A /* GBCAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GBCAppDelegate.h; sourceTree = "<group>"; };
 		0B3964E7180E6A9200AEA17A /* GBCAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GBCAppDelegate.m; sourceTree = "<group>"; };
 		0B3964EA180E6A9200AEA17A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		0B3964EC180E6A9200AEA17A /* GBCFirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GBCFirstViewController.h; sourceTree = "<group>"; };
-		0B3964ED180E6A9200AEA17A /* GBCFirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GBCFirstViewController.m; sourceTree = "<group>"; };
-		0B3964EF180E6A9200AEA17A /* GBCSecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GBCSecondViewController.h; sourceTree = "<group>"; };
-		0B3964F0180E6A9200AEA17A /* GBCSecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GBCSecondViewController.m; sourceTree = "<group>"; };
+		0B3964EC180E6A9200AEA17A /* GBCMessageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GBCMessageViewController.h; sourceTree = "<group>"; };
+		0B3964ED180E6A9200AEA17A /* GBCMessageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GBCMessageViewController.m; sourceTree = "<group>"; };
+		0B3964EF180E6A9200AEA17A /* GBCContactsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GBCContactsViewController.h; sourceTree = "<group>"; };
+		0B3964F0180E6A9200AEA17A /* GBCContactsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GBCContactsViewController.m; sourceTree = "<group>"; };
 		0B3964F2180E6A9200AEA17A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		0B3964F8180E6A9200AEA17A /* GreenBitChatTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GreenBitChatTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B3964F9180E6A9200AEA17A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -118,10 +118,10 @@
 				0B3964E6180E6A9200AEA17A /* GBCAppDelegate.h */,
 				0B3964E7180E6A9200AEA17A /* GBCAppDelegate.m */,
 				0B3964E9180E6A9200AEA17A /* Main.storyboard */,
-				0B3964EC180E6A9200AEA17A /* GBCFirstViewController.h */,
-				0B3964ED180E6A9200AEA17A /* GBCFirstViewController.m */,
-				0B3964EF180E6A9200AEA17A /* GBCSecondViewController.h */,
-				0B3964F0180E6A9200AEA17A /* GBCSecondViewController.m */,
+				0B3964EC180E6A9200AEA17A /* GBCMessageViewController.h */,
+				0B3964ED180E6A9200AEA17A /* GBCMessageViewController.m */,
+				0B3964EF180E6A9200AEA17A /* GBCContactsViewController.h */,
+				0B3964F0180E6A9200AEA17A /* GBCContactsViewController.m */,
 				0B3964F2180E6A9200AEA17A /* Images.xcassets */,
 				0B3964DE180E6A9200AEA17A /* Supporting Files */,
 			);
@@ -255,10 +255,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0B3964EE180E6A9200AEA17A /* GBCFirstViewController.m in Sources */,
+				0B3964EE180E6A9200AEA17A /* GBCMessageViewController.m in Sources */,
 				0B3964E4180E6A9200AEA17A /* main.m in Sources */,
 				0B3964E8180E6A9200AEA17A /* GBCAppDelegate.m in Sources */,
-				0B3964F1180E6A9200AEA17A /* GBCSecondViewController.m in Sources */,
+				0B3964F1180E6A9200AEA17A /* GBCContactsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -467,6 +467,7 @@
 				0B39650B180E6A9200AEA17A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0B39650C180E6A9200AEA17A /* Build configuration list for PBXNativeTarget "GreenBitChatTests" */ = {
 			isa = XCConfigurationList;
@@ -475,6 +476,7 @@
 				0B39650E180E6A9200AEA17A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
