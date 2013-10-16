@@ -1,0 +1,482 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0B3964D8180E6A9200AEA17A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B3964D7180E6A9200AEA17A /* Foundation.framework */; };
+		0B3964DA180E6A9200AEA17A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B3964D9180E6A9200AEA17A /* CoreGraphics.framework */; };
+		0B3964DC180E6A9200AEA17A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B3964DB180E6A9200AEA17A /* UIKit.framework */; };
+		0B3964E2180E6A9200AEA17A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0B3964E0180E6A9200AEA17A /* InfoPlist.strings */; };
+		0B3964E4180E6A9200AEA17A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B3964E3180E6A9200AEA17A /* main.m */; };
+		0B3964E8180E6A9200AEA17A /* GBCAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B3964E7180E6A9200AEA17A /* GBCAppDelegate.m */; };
+		0B3964EB180E6A9200AEA17A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B3964E9180E6A9200AEA17A /* Main.storyboard */; };
+		0B3964EE180E6A9200AEA17A /* GBCFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B3964ED180E6A9200AEA17A /* GBCFirstViewController.m */; };
+		0B3964F1180E6A9200AEA17A /* GBCSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B3964F0180E6A9200AEA17A /* GBCSecondViewController.m */; };
+		0B3964F3180E6A9200AEA17A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B3964F2180E6A9200AEA17A /* Images.xcassets */; };
+		0B3964FA180E6A9200AEA17A /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B3964F9180E6A9200AEA17A /* XCTest.framework */; };
+		0B3964FB180E6A9200AEA17A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B3964D7180E6A9200AEA17A /* Foundation.framework */; };
+		0B3964FC180E6A9200AEA17A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B3964DB180E6A9200AEA17A /* UIKit.framework */; };
+		0B396504180E6A9200AEA17A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0B396502180E6A9200AEA17A /* InfoPlist.strings */; };
+		0B396506180E6A9200AEA17A /* GreenBitChatTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B396505180E6A9200AEA17A /* GreenBitChatTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0B3964FD180E6A9200AEA17A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0B3964CC180E6A9200AEA17A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0B3964D3180E6A9200AEA17A;
+			remoteInfo = GreenBitChat;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0B3964D4180E6A9200AEA17A /* GreenBitChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GreenBitChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0B3964D7180E6A9200AEA17A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		0B3964D9180E6A9200AEA17A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		0B3964DB180E6A9200AEA17A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		0B3964DF180E6A9200AEA17A /* GreenBitChat-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GreenBitChat-Info.plist"; sourceTree = "<group>"; };
+		0B3964E1180E6A9200AEA17A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		0B3964E3180E6A9200AEA17A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		0B3964E5180E6A9200AEA17A /* GreenBitChat-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GreenBitChat-Prefix.pch"; sourceTree = "<group>"; };
+		0B3964E6180E6A9200AEA17A /* GBCAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GBCAppDelegate.h; sourceTree = "<group>"; };
+		0B3964E7180E6A9200AEA17A /* GBCAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GBCAppDelegate.m; sourceTree = "<group>"; };
+		0B3964EA180E6A9200AEA17A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		0B3964EC180E6A9200AEA17A /* GBCFirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GBCFirstViewController.h; sourceTree = "<group>"; };
+		0B3964ED180E6A9200AEA17A /* GBCFirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GBCFirstViewController.m; sourceTree = "<group>"; };
+		0B3964EF180E6A9200AEA17A /* GBCSecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GBCSecondViewController.h; sourceTree = "<group>"; };
+		0B3964F0180E6A9200AEA17A /* GBCSecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GBCSecondViewController.m; sourceTree = "<group>"; };
+		0B3964F2180E6A9200AEA17A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		0B3964F8180E6A9200AEA17A /* GreenBitChatTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GreenBitChatTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0B3964F9180E6A9200AEA17A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		0B396501180E6A9200AEA17A /* GreenBitChatTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GreenBitChatTests-Info.plist"; sourceTree = "<group>"; };
+		0B396503180E6A9200AEA17A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		0B396505180E6A9200AEA17A /* GreenBitChatTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GreenBitChatTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0B3964D1180E6A9200AEA17A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0B3964DA180E6A9200AEA17A /* CoreGraphics.framework in Frameworks */,
+				0B3964DC180E6A9200AEA17A /* UIKit.framework in Frameworks */,
+				0B3964D8180E6A9200AEA17A /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0B3964F5180E6A9200AEA17A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0B3964FA180E6A9200AEA17A /* XCTest.framework in Frameworks */,
+				0B3964FC180E6A9200AEA17A /* UIKit.framework in Frameworks */,
+				0B3964FB180E6A9200AEA17A /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0B3964CB180E6A9200AEA17A = {
+			isa = PBXGroup;
+			children = (
+				0B3964DD180E6A9200AEA17A /* GreenBitChat */,
+				0B3964FF180E6A9200AEA17A /* GreenBitChatTests */,
+				0B3964D6180E6A9200AEA17A /* Frameworks */,
+				0B3964D5180E6A9200AEA17A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		0B3964D5180E6A9200AEA17A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0B3964D4180E6A9200AEA17A /* GreenBitChat.app */,
+				0B3964F8180E6A9200AEA17A /* GreenBitChatTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0B3964D6180E6A9200AEA17A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0B3964D7180E6A9200AEA17A /* Foundation.framework */,
+				0B3964D9180E6A9200AEA17A /* CoreGraphics.framework */,
+				0B3964DB180E6A9200AEA17A /* UIKit.framework */,
+				0B3964F9180E6A9200AEA17A /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0B3964DD180E6A9200AEA17A /* GreenBitChat */ = {
+			isa = PBXGroup;
+			children = (
+				0B3964E6180E6A9200AEA17A /* GBCAppDelegate.h */,
+				0B3964E7180E6A9200AEA17A /* GBCAppDelegate.m */,
+				0B3964E9180E6A9200AEA17A /* Main.storyboard */,
+				0B3964EC180E6A9200AEA17A /* GBCFirstViewController.h */,
+				0B3964ED180E6A9200AEA17A /* GBCFirstViewController.m */,
+				0B3964EF180E6A9200AEA17A /* GBCSecondViewController.h */,
+				0B3964F0180E6A9200AEA17A /* GBCSecondViewController.m */,
+				0B3964F2180E6A9200AEA17A /* Images.xcassets */,
+				0B3964DE180E6A9200AEA17A /* Supporting Files */,
+			);
+			path = GreenBitChat;
+			sourceTree = "<group>";
+		};
+		0B3964DE180E6A9200AEA17A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0B3964DF180E6A9200AEA17A /* GreenBitChat-Info.plist */,
+				0B3964E0180E6A9200AEA17A /* InfoPlist.strings */,
+				0B3964E3180E6A9200AEA17A /* main.m */,
+				0B3964E5180E6A9200AEA17A /* GreenBitChat-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0B3964FF180E6A9200AEA17A /* GreenBitChatTests */ = {
+			isa = PBXGroup;
+			children = (
+				0B396505180E6A9200AEA17A /* GreenBitChatTests.m */,
+				0B396500180E6A9200AEA17A /* Supporting Files */,
+			);
+			path = GreenBitChatTests;
+			sourceTree = "<group>";
+		};
+		0B396500180E6A9200AEA17A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0B396501180E6A9200AEA17A /* GreenBitChatTests-Info.plist */,
+				0B396502180E6A9200AEA17A /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0B3964D3180E6A9200AEA17A /* GreenBitChat */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0B396509180E6A9200AEA17A /* Build configuration list for PBXNativeTarget "GreenBitChat" */;
+			buildPhases = (
+				0B3964D0180E6A9200AEA17A /* Sources */,
+				0B3964D1180E6A9200AEA17A /* Frameworks */,
+				0B3964D2180E6A9200AEA17A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GreenBitChat;
+			productName = GreenBitChat;
+			productReference = 0B3964D4180E6A9200AEA17A /* GreenBitChat.app */;
+			productType = "com.apple.product-type.application";
+		};
+		0B3964F7180E6A9200AEA17A /* GreenBitChatTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0B39650C180E6A9200AEA17A /* Build configuration list for PBXNativeTarget "GreenBitChatTests" */;
+			buildPhases = (
+				0B3964F4180E6A9200AEA17A /* Sources */,
+				0B3964F5180E6A9200AEA17A /* Frameworks */,
+				0B3964F6180E6A9200AEA17A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0B3964FE180E6A9200AEA17A /* PBXTargetDependency */,
+			);
+			name = GreenBitChatTests;
+			productName = GreenBitChatTests;
+			productReference = 0B3964F8180E6A9200AEA17A /* GreenBitChatTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0B3964CC180E6A9200AEA17A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = GBC;
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = L;
+				TargetAttributes = {
+					0B3964F7180E6A9200AEA17A = {
+						TestTargetID = 0B3964D3180E6A9200AEA17A;
+					};
+				};
+			};
+			buildConfigurationList = 0B3964CF180E6A9200AEA17A /* Build configuration list for PBXProject "GreenBitChat" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 0B3964CB180E6A9200AEA17A;
+			productRefGroup = 0B3964D5180E6A9200AEA17A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0B3964D3180E6A9200AEA17A /* GreenBitChat */,
+				0B3964F7180E6A9200AEA17A /* GreenBitChatTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0B3964D2180E6A9200AEA17A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0B3964F3180E6A9200AEA17A /* Images.xcassets in Resources */,
+				0B3964E2180E6A9200AEA17A /* InfoPlist.strings in Resources */,
+				0B3964EB180E6A9200AEA17A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0B3964F6180E6A9200AEA17A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0B396504180E6A9200AEA17A /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0B3964D0180E6A9200AEA17A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0B3964EE180E6A9200AEA17A /* GBCFirstViewController.m in Sources */,
+				0B3964E4180E6A9200AEA17A /* main.m in Sources */,
+				0B3964E8180E6A9200AEA17A /* GBCAppDelegate.m in Sources */,
+				0B3964F1180E6A9200AEA17A /* GBCSecondViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0B3964F4180E6A9200AEA17A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0B396506180E6A9200AEA17A /* GreenBitChatTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0B3964FE180E6A9200AEA17A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0B3964D3180E6A9200AEA17A /* GreenBitChat */;
+			targetProxy = 0B3964FD180E6A9200AEA17A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		0B3964E0180E6A9200AEA17A /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0B3964E1180E6A9200AEA17A /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		0B3964E9180E6A9200AEA17A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0B3964EA180E6A9200AEA17A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		0B396502180E6A9200AEA17A /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0B396503180E6A9200AEA17A /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		0B396507180E6A9200AEA17A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		0B396508180E6A9200AEA17A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0B39650A180E6A9200AEA17A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GreenBitChat/GreenBitChat-Prefix.pch";
+				INFOPLIST_FILE = "GreenBitChat/GreenBitChat-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		0B39650B180E6A9200AEA17A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GreenBitChat/GreenBitChat-Prefix.pch";
+				INFOPLIST_FILE = "GreenBitChat/GreenBitChat-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		0B39650D180E6A9200AEA17A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/GreenBitChat.app/GreenBitChat";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GreenBitChat/GreenBitChat-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "GreenBitChatTests/GreenBitChatTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		0B39650E180E6A9200AEA17A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/GreenBitChat.app/GreenBitChat";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GreenBitChat/GreenBitChat-Prefix.pch";
+				INFOPLIST_FILE = "GreenBitChatTests/GreenBitChatTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0B3964CF180E6A9200AEA17A /* Build configuration list for PBXProject "GreenBitChat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0B396507180E6A9200AEA17A /* Debug */,
+				0B396508180E6A9200AEA17A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0B396509180E6A9200AEA17A /* Build configuration list for PBXNativeTarget "GreenBitChat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0B39650A180E6A9200AEA17A /* Debug */,
+				0B39650B180E6A9200AEA17A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		0B39650C180E6A9200AEA17A /* Build configuration list for PBXNativeTarget "GreenBitChatTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0B39650D180E6A9200AEA17A /* Debug */,
+				0B39650E180E6A9200AEA17A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0B3964CC180E6A9200AEA17A /* Project object */;
+}
