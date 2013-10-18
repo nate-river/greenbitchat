@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B17388D1810D8FC00616295 /* GBCChatWindowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B17388C1810D8FC00616295 /* GBCChatWindowViewController.m */; };
 		0B3964D8180E6A9200AEA17A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B3964D7180E6A9200AEA17A /* Foundation.framework */; };
 		0B3964DA180E6A9200AEA17A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B3964D9180E6A9200AEA17A /* CoreGraphics.framework */; };
 		0B3964DC180E6A9200AEA17A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B3964DB180E6A9200AEA17A /* UIKit.framework */; };
@@ -35,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0B17388B1810D8FC00616295 /* GBCChatWindowViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GBCChatWindowViewController.h; sourceTree = "<group>"; };
+		0B17388C1810D8FC00616295 /* GBCChatWindowViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GBCChatWindowViewController.m; sourceTree = "<group>"; };
 		0B3964D4180E6A9200AEA17A /* GreenBitChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GreenBitChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B3964D7180E6A9200AEA17A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		0B3964D9180E6A9200AEA17A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -124,6 +127,8 @@
 				0B3964F0180E6A9200AEA17A /* GBCContactsViewController.m */,
 				0B3964F2180E6A9200AEA17A /* Images.xcassets */,
 				0B3964DE180E6A9200AEA17A /* Supporting Files */,
+				0B17388B1810D8FC00616295 /* GBCChatWindowViewController.h */,
+				0B17388C1810D8FC00616295 /* GBCChatWindowViewController.m */,
 			);
 			path = GreenBitChat;
 			sourceTree = "<group>";
@@ -255,6 +260,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B17388D1810D8FC00616295 /* GBCChatWindowViewController.m in Sources */,
 				0B3964EE180E6A9200AEA17A /* GBCMessageViewController.m in Sources */,
 				0B3964E4180E6A9200AEA17A /* main.m in Sources */,
 				0B3964E8180E6A9200AEA17A /* GBCAppDelegate.m in Sources */,

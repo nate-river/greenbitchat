@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface GBCMessageViewController : UIViewController
-
+@interface GBCMessageViewController : UIViewController <UITableViewDelegate,UITableViewDataSource>
+@property (nonatomic, strong) IBOutlet UITableView *tableView;
 @end

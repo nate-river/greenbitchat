@@ -8,20 +8,114 @@
         <scene sceneID="W3I-pn-N6e">
             <objects>
                 <viewController title="Message" id="CZ4-MO-1fc" userLabel="Message View Controller - Message" customClass="GBCMessageViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="l49-jt-vWC">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="70" sectionHeaderHeight="22" sectionFooterHeight="22" id="l49-jt-vWC">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" id="7WL-Ha-Mz7">
+                            <rect key="frame" x="0.0" y="64" width="320" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <outlet property="delegate" destination="CZ4-MO-1fc" id="eC4-aO-N7Z"/>
+                            </connections>
+                        </searchBar>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="RecipeCell" id="MCx-Sg-zOR">
+                                <rect key="frame" x="0.0" y="130" width="320" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="MCx-Sg-zOR" id="fYv-KP-DG1">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="69"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="逗乐的" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wzq-Gm-4uP">
+                                            <rect key="frame" x="20" y="11" width="51" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="人生的两大境界一是痛而不言" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="391" translatesAutoresizingMaskIntoConstraints="NO" id="BJE-XE-Ots">
+                                            <rect key="frame" x="20" y="32" width="391" height="31"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" name="STHeitiSC-Light" family="Heiti SC" pointSize="14"/>
+                                            <color key="textColor" red="0.46543817934782605" green="0.46543817934782605" blue="0.46543817934782605" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="3" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="昨天" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C4u-Qa-KvJ">
+                                            <rect key="frame" x="248" y="11" width="34" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <color key="textColor" red="0.69550356657608692" green="0.69550356657608692" blue="0.69550356657608692" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QS5-wG-YL2">
+                                            <rect key="frame" x="279" y="11" width="26" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="hUK-Ei-84m" kind="push" identifier="showChatWindow" id="vy8-Cu-MOk"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
                         <connections>
                             <outlet property="dataSource" destination="CZ4-MO-1fc" id="I5u-5o-cLp"/>
                             <outlet property="delegate" destination="CZ4-MO-1fc" id="rFR-Si-nJV"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="jt0-ms-biQ"/>
+                    <navigationItem key="navigationItem" title="信息" id="jt0-ms-biQ">
+                        <barButtonItem key="leftBarButtonItem" systemItem="edit" id="cQr-77-ciz"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="compose" id="pp9-Qh-L5l"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="searchDisplayController" destination="Kew-ek-XVE" id="EWg-1b-eS1"/>
+                        <outlet property="tableView" destination="l49-jt-vWC" id="cUP-Qu-drw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qh2-T1-AhA" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="Kew-ek-XVE">
+                    <connections>
+                        <outlet property="delegate" destination="CZ4-MO-1fc" id="dRW-Yw-gbe"/>
+                        <outlet property="searchBar" destination="7WL-Ha-Mz7" id="8KT-Dm-ZUf"/>
+                        <outlet property="searchContentsController" destination="CZ4-MO-1fc" id="6qc-b3-h0G"/>
+                        <outlet property="searchResultsDataSource" destination="CZ4-MO-1fc" id="y5e-Sr-pdS"/>
+                        <outlet property="searchResultsDelegate" destination="CZ4-MO-1fc" id="RdT-li-jEL"/>
+                    </connections>
+                </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="1179" y="-138"/>
+            <point key="canvasLocation" x="1243" y="-138"/>
+        </scene>
+        <!--Chat Window View Controller-->
+        <scene sceneID="yqy-2p-UPg">
+            <objects>
+                <viewController id="hUK-Ei-84m" customClass="GBCChatWindowViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="f73-Y7-xOg"/>
+                        <viewControllerLayoutGuide type="bottom" id="NzB-GZ-O7m"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="KSf-q4-11z">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="am6-Yz-Ats">
+                                <rect key="frame" x="99" y="289" width="123" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Ivu-4f-tEp"/>
+                    <connections>
+                        <outlet property="recipeLabel" destination="am6-Yz-Ats" id="iAE-ne-ubc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="k1c-eG-RWZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1659" y="-142"/>
         </scene>
         <!--Contacts View Controller - Contacts-->
         <scene sceneID="ot8-2e-RuS">
@@ -78,7 +172,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PJr-ga-MCr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="653" y="-138"/>
+            <point key="canvasLocation" x="699" y="-138"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Lmk-DO-jbX">
@@ -97,7 +191,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mYd-kJ-ugw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="699" y="706"/>
+            <point key="canvasLocation" x="687" y="706"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
