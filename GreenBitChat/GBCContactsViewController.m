@@ -8,14 +8,12 @@
 
 #import "GBCContactsViewController.h"
 
-#define kItemKeyTitle       @"title"
-#define kItemKeyDescription @"description"
-#define kItemKeyClassPrefix @"prefix"
-
-
 @interface GBCContactsViewController ()
-@property (nonatomic, strong) NSArray *tableData;
-@property (nonatomic, strong) NSArray *indexOfNumbers;
+
+@property(nonatomic, copy) NSArray *famousPersons;
+//@property(nonatomic, copy)NSArray *filteredPersons;
+@property(nonatomic, copy) NSArray *sections;
+
 @end
 
 
@@ -25,53 +23,73 @@
 {
     [super viewDidLoad];
     
-    NSString *numbers = @"100 200 300 400 500 600 700 800 900 1000 1100 1200 1300 1400 1500";
-    self.tableData = [numbers componentsSeparatedByString:@" "];
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"Top100FamousPersons" ofType:@"plist"];
+    _famousPersons = [[NSArray alloc] initWithContentsOfFile:path];
     
-    numbers = @"1 2 3 4 5 6 7 8 9 10 11 12 13 14 15";
-    self.indexOfNumbers = [numbers componentsSeparatedByString:@" "];
-}
-
--(NSInteger)tableView:(UITableView *)tableView
-numberOfRowsInSection:(NSInteger)section
-{
-    return 1;
-}
-
--(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
-    return [self.indexOfNumbers count];
-}
-
--(UITableViewCell *)tableView:(UITableView *)tableView
-        cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    static NSString *cellIdentifier = @"cell";
+    UILocalizedIndexedCollation *collation = [UILocalizedIndexedCollation currentCollation];
     
-    UITableViewCell *cell =[tableView dequeueReusableCellWithIdentifier:cellIdentifier];
-    
-    if (!cell) {
-        cell = [[UITableViewCell alloc]
-                initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
+    NSMutableArray *unsortedSections = [[NSMutableArray alloc] initWithCapacity:[[collation sectionTitles] count]];
+    for (NSUInteger i = 0; i < [[collation sectionTitles] count]; i++) {
+        [unsortedSections addObject:[NSMutableArray array]];
     }
     
-    cell.textLabel.text = [self.tableData objectAtIndex:indexPath.section];
+    for (NSString *personName in self.famousPersons) {
+        NSInteger index = [collation sectionForObject:personName collationStringSelector:@selector(description)];
+        [[unsortedSections objectAtIndex:index] addObject:personName];
+    }
     
-    return cell;
+    NSMutableArray *sortedSections = [[NSMutableArray alloc] initWithCapacity:unsortedSections.count];
+    for (NSMutableArray *section in unsortedSections) {
+        [sortedSections addObject:[collation sortedArrayFromArray:section collationStringSelector:@selector(description)]];
+    }
     
+    self.sections = sortedSections;
 }
 
 - (NSArray *)sectionIndexTitlesForTableView:(UITableView *)tableView
 {
-    return self.indexOfNumbers;
+    return [[NSArray arrayWithObject:UITableViewIndexSearch] arrayByAddingObjectsFromArray:[[UILocalizedIndexedCollation currentCollation] sectionIndexTitles]];
 }
 
-- (NSInteger)tableView:(UITableView *)tableView
-sectionForSectionIndexTitle:(NSString *)title atIndex:(NSInteger)index
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
 {
-    return [self.indexOfNumbers indexOfObject:title];
+    if ([[self.sections objectAtIndex:section] count] > 0) {
+        return [[[UILocalizedIndexedCollation currentCollation] sectionTitles] objectAtIndex:section];
+    } else {
+            return nil;
+    }
 }
 
+- (NSInteger)tableView:(UITableView *)tableView sectionForSectionIndexTitle:(NSString *)title atIndex:(NSInteger)index
+{
+    return [[UILocalizedIndexedCollation currentCollation] sectionForSectionIndexTitleAtIndex:index]; // -1 because we add the search symbol
+}
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return self.sections.count;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return [[self.sections objectAtIndex:section] count];
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *simpleTableIdentifier = @"Cell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
+    }
+    cell.textLabel.text = [[self.sections objectAtIndex:indexPath.section] objectAtIndex:indexPath.row];
+    return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+}
 
 
 - (void)didReceiveMemoryWarning

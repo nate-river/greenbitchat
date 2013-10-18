@@ -131,8 +131,19 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="Cld-6h-jIi"/>
+                    <connections>
+                        <outlet property="searchDisplayController" destination="tsq-w9-cBw" id="yaF-k1-el8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3qq-4t-Ow8" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="tsq-w9-cBw">
+                    <connections>
+                        <outlet property="delegate" destination="QUy-BD-bpt" id="Ha7-83-GIF"/>
+                        <outlet property="searchContentsController" destination="QUy-BD-bpt" id="y70-Iz-yXc"/>
+                        <outlet property="searchResultsDataSource" destination="QUy-BD-bpt" id="9LD-LJ-23t"/>
+                        <outlet property="searchResultsDelegate" destination="QUy-BD-bpt" id="aPK-jY-DJC"/>
+                    </connections>
+                </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="1225" y="706"/>
         </scene>
