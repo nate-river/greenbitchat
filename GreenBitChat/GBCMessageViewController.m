@@ -66,13 +66,15 @@
     } else
     {
         label = (UILabel *)[cell viewWithTag:1];
-        label.text = [recipes objectAtIndex:indexPath.row];
+        label.text = @"乔布斯";
         
         label = (UILabel *)[cell viewWithTag:2];
-        label.text = [recipes objectAtIndex:indexPath.row];
+        label.text = @"人生的两个境界";
+        //label.lineBreakMode = UILineBreakModeWordWrap;
+        label.numberOfLines = 2;
         
         label = (UILabel *)[cell viewWithTag:3];
-        label.text = [recipes objectAtIndex:indexPath.row];
+        label.text = @"星期一";
         //cell.textLabel.text = [recipes objectAtIndex:indexPath.row];
     }
     return cell;
@@ -123,6 +125,12 @@
         }
         destViewController.hidesBottomBarWhenPushed = YES;
     }
+    if ([segue.identifier isEqualToString:@"showContactList"])
+    {
+        GBCChatWindowViewController *destViewController = segue.destinationViewController;
+        destViewController.hidesBottomBarWhenPushed = YES;
+    }
+
 }
 
 - (void)filterContentForSearchText:(NSString*)searchText scope:(NSString*)scope

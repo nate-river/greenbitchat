@@ -66,6 +66,8 @@
 		0B1739151814339E00616295 /* UIColor+JSMessagesView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B1738DC1814339E00616295 /* UIColor+JSMessagesView.m */; };
 		0B1739161814339E00616295 /* UIImage+JSMessagesView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B1738DE1814339E00616295 /* UIImage+JSMessagesView.m */; };
 		0B1739171814339E00616295 /* UIView+AnimationOptionsForCurve.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B1738E01814339E00616295 /* UIView+AnimationOptionsForCurve.m */; };
+		0B17391A1814D32800616295 /* demo-avatar-jobs.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B1739181814D32700616295 /* demo-avatar-jobs.png */; };
+		0B17391B1814D32800616295 /* demo-avatar-woz.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B1739191814D32700616295 /* demo-avatar-woz.png */; };
 		0B3964D8180E6A9200AEA17A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B3964D7180E6A9200AEA17A /* Foundation.framework */; };
 		0B3964DA180E6A9200AEA17A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B3964D9180E6A9200AEA17A /* CoreGraphics.framework */; };
 		0B3964DC180E6A9200AEA17A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B3964DB180E6A9200AEA17A /* UIKit.framework */; };
@@ -167,6 +169,8 @@
 		0B1738DE1814339E00616295 /* UIImage+JSMessagesView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+JSMessagesView.m"; sourceTree = "<group>"; };
 		0B1738DF1814339E00616295 /* UIView+AnimationOptionsForCurve.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+AnimationOptionsForCurve.h"; sourceTree = "<group>"; };
 		0B1738E01814339E00616295 /* UIView+AnimationOptionsForCurve.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+AnimationOptionsForCurve.m"; sourceTree = "<group>"; };
+		0B1739181814D32700616295 /* demo-avatar-jobs.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "demo-avatar-jobs.png"; sourceTree = "<group>"; };
+		0B1739191814D32700616295 /* demo-avatar-woz.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "demo-avatar-woz.png"; sourceTree = "<group>"; };
 		0B3964D4180E6A9200AEA17A /* GreenBitChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GreenBitChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B3964D7180E6A9200AEA17A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		0B3964D9180E6A9200AEA17A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -367,6 +371,8 @@
 		0B3964DE180E6A9200AEA17A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				0B1739181814D32700616295 /* demo-avatar-jobs.png */,
+				0B1739191814D32700616295 /* demo-avatar-woz.png */,
 				0B17388E181135F600616295 /* Top100FamousPersons.plist */,
 				0B3964DF180E6A9200AEA17A /* GreenBitChat-Info.plist */,
 				0B3964E0180E6A9200AEA17A /* InfoPlist.strings */,
@@ -489,6 +495,7 @@
 				0B1738FE1814339E00616295 /* bubble-square-incoming-selected.png in Resources */,
 				0B1738F01814339E00616295 /* bubble-default-outgoing-selected.png in Resources */,
 				0B1738F51814339E00616295 /* bubble-flat-incoming-selected@2x.png in Resources */,
+				0B17391B1814D32800616295 /* demo-avatar-woz.png in Resources */,
 				0B1739041814339E00616295 /* bubble-square-outgoing.png in Resources */,
 				0B1738EC1814339E00616295 /* bubble-default-incoming.png in Resources */,
 				0B1738F71814339E00616295 /* bubble-flat-incoming@2x.png in Resources */,
@@ -511,6 +518,7 @@
 				0B1739071814339E00616295 /* bubble-typing@2x.png in Resources */,
 				0B3964E2180E6A9200AEA17A /* InfoPlist.strings in Resources */,
 				0B1739031814339E00616295 /* bubble-square-outgoing-selected@2x.png in Resources */,
+				0B17391A1814D32800616295 /* demo-avatar-jobs.png in Resources */,
 				0B17390A1814339E00616295 /* input-bar.png in Resources */,
 				0B1738EA1814339E00616295 /* bubble-default-incoming-selected.png in Resources */,
 				0B1739111814339E00616295 /* send@2x.png in Resources */,
@@ -621,7 +629,8 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: yu yang (P8JXKJDU28)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: yu yang (P8JXKJDU28)";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -681,6 +690,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer: yu yang (P8JXKJDU28)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GreenBitChat/GreenBitChat-Prefix.pch";
 				INFOPLIST_FILE = "GreenBitChat/GreenBitChat-Info.plist";

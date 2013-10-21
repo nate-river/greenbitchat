@@ -37,10 +37,10 @@
     self.title = @"Messages";
     
     self.messages = [[NSMutableArray alloc] initWithObjects:
-                     @"Testing some messages here.",
-                     @"Options for avatars: none, circles, or squares",
-                     @"This is a complete re-write and refactoring.",
-                     @"It's easy to implement. Sound effects and images included. Animations are smooth and messages can be of arbitrary size!",
+                     @"测试一下我们的信息发送",
+                     @"图片有三种样式的嘛？",
+                     @"对的.下一步准备加入滑动弹弹的效果！",
+                     @"好吧！你们加油吧！做到这个对你来说应该是很随意的吧？沃兹？",
                      nil];
     
     self.timestamps = [[NSMutableArray alloc] initWithObjects:
@@ -106,7 +106,7 @@
 
 - (JSAvatarStyle)avatarStyle
 {
-    return JSAvatarStyleSquare;
+    return JSAvatarStyleCircle;
 }
 
 - (JSInputBarStyle)inputBarStyle
