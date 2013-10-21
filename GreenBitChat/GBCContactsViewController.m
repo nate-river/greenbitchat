@@ -11,7 +11,6 @@
 @interface GBCContactsViewController ()
 
 @property(nonatomic, copy) NSArray *famousPersons;
-//@property(nonatomic, copy)NSArray *filteredPersons;
 @property(nonatomic, copy) NSArray *sections;
 
 @end
@@ -24,7 +23,7 @@
     [super viewDidLoad];
     
     NSString *path = [[NSBundle mainBundle] pathForResource:@"Top100FamousPersons" ofType:@"plist"];
-    _famousPersons = [[NSArray alloc] initWithContentsOfFile:path];
+    self.famousPersons = [[NSArray alloc] initWithContentsOfFile:path];
     
     UILocalizedIndexedCollation *collation = [UILocalizedIndexedCollation currentCollation];
     
@@ -67,11 +66,13 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
+    NSLog(@"%d", self.sections.count);
     return self.sections.count;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
+    NSLog(@"%d", [[self.sections objectAtIndex:section] count]);
     return [[self.sections objectAtIndex:section] count];
 }
 

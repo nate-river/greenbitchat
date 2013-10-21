@@ -7,8 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "JSMessagesViewController.h"
 
-@interface GBCChatWindowViewController : UIViewController
+@interface GBCChatWindowViewController : JSMessagesViewController <JSMessagesViewDelegate, JSMessagesViewDataSource>
 @property (nonatomic, strong) IBOutlet UILabel *recipeLabel;
 @property (nonatomic, strong) NSString *recipeName;
+
+@property (strong, nonatomic) NSMutableArray *messages;
+@property (strong, nonatomic) NSMutableArray *timestamps;
+
 @end
