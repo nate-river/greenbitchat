@@ -8,15 +8,27 @@
 
 #import "GBCContactsViewController.h"
 
+static NSString * const kFKRSearchBarTableViewControllerDefaultTableViewCellIdentifier = @"kFKRSearchBarTableViewControllerDefaultTableViewCellIdentifier";
+
 @interface GBCContactsViewController ()
+{
+    
+}
 
 @property(nonatomic, copy) NSArray *famousPersons;
+@property(nonatomic, copy) NSArray *filteredPersons;
 @property(nonatomic, copy) NSArray *sections;
+
+@property(nonatomic, strong, readwrite) UITableView *tableView;
+@property(nonatomic, strong, readwrite) UISearchBar *searchBar;
+
+@property(nonatomic, strong) UISearchDisplayController *strongSearchDisplayController; // UIViewController doesn't retain the search display controller if it's created programmatically: http://openradar.appspot.com/10254897
 
 @end
 
 
 @implementation GBCContactsViewController
+
 
 - (void)viewDidLoad
 {
@@ -43,11 +55,43 @@
     }
     
     self.sections = sortedSections;
+    self.tableView = [[UITableView alloc] initWithFrame:self.view.bounds];
+    self.tableView.dataSource = self;
+    self.tableView.delegate = self;
+    
+    [self.view addSubview:self.tableView];
+    
+    self.searchBar = [[UISearchBar alloc] initWithFrame:CGRectZero];
+    self.searchBar.placeholder = @"Search";
+    self.searchBar.delegate = self;
+    
+    [self.searchBar sizeToFit];
+    
+    self.strongSearchDisplayController = [[UISearchDisplayController alloc] initWithSearchBar:self.searchBar contentsController:self];
+    self.searchDisplayController.searchResultsDataSource = self;
+    self.searchDisplayController.searchResultsDelegate = self;
+    self.searchDisplayController.delegate = self;
+    
+    
+    /*
+     Default behavior:
+     The search bar scrolls along with the table view.
+     */
+    
+    self.tableView.tableHeaderView = self.searchBar;
+    
+    // The search bar is hidden when the view becomes visible the first time
+    self.tableView.contentOffset = CGPointMake(0, CGRectGetHeight(self.searchBar.bounds));
+
 }
 
 - (NSArray *)sectionIndexTitlesForTableView:(UITableView *)tableView
 {
-    return [[NSArray arrayWithObject:UITableViewIndexSearch] arrayByAddingObjectsFromArray:[[UILocalizedIndexedCollation currentCollation] sectionIndexTitles]];
+    if (tableView == self.tableView) {
+        return [[NSArray arrayWithObject:UITableViewIndexSearch] arrayByAddingObjectsFromArray:[[UILocalizedIndexedCollation currentCollation] sectionIndexTitles]];
+    }else{
+        return nil;
+    }
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
@@ -61,17 +105,25 @@
 
 - (NSInteger)tableView:(UITableView *)tableView sectionForSectionIndexTitle:(NSString *)title atIndex:(NSInteger)index
 {
-    return [[UILocalizedIndexedCollation currentCollation] sectionForSectionIndexTitleAtIndex:index]; // -1 because we add the search symbol
+    return [[UILocalizedIndexedCollation currentCollation] sectionForSectionIndexTitleAtIndex:index] - 1 ;//because we add the search symbol
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return self.sections.count;
+    if (tableView == self.tableView) {
+        return self.sections.count;
+    }else{
+        return 1;
+    }
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [[self.sections objectAtIndex:section] count];
+    if (tableView == self.tableView) {
+        return [[self.sections objectAtIndex:section] count];
+    }else{
+        return self.filteredPersons.count;
+    }
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -81,7 +133,11 @@
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
     }
-    cell.textLabel.text = [[self.sections objectAtIndex:indexPath.section] objectAtIndex:indexPath.row];
+    if (tableView == self.tableView) {
+        cell.textLabel.text = [[self.sections objectAtIndex:indexPath.section] objectAtIndex:indexPath.row];
+    } else {
+        cell.textLabel.text = [self.filteredPersons objectAtIndex:indexPath.row];
+    }
     return cell;
 }
 
@@ -95,6 +151,25 @@
 {
     [super didReceiveMemoryWarning];
 }
+#pragma mark - Search Delegate
+
+- (void)searchDisplayControllerWillBeginSearch:(UISearchDisplayController *)controller
+{
+    self.filteredPersons = self.famousPersons;
+}
+
+- (void)searchDisplayControllerDidEndSearch:(UISearchDisplayController *)controller
+{
+    self.filteredPersons = nil;
+}
+
+- (BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchString:(NSString *)searchString
+{
+    self.filteredPersons = [self.filteredPersons filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"SELF contains[cd] %@", searchString]];
+    
+    return YES;
+}
+
 
 
 @end

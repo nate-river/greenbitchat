@@ -106,15 +106,6 @@
         <scene sceneID="ot8-2e-RuS">
             <objects>
                 <viewController title="Contacts" id="QUy-BD-bpt" userLabel="Contacts View Controller - Contacts" customClass="GBCContactsViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="BlB-V7-xMi">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <connections>
-                            <outlet property="dataSource" destination="QUy-BD-bpt" id="a7M-az-40G"/>
-                            <outlet property="delegate" destination="QUy-BD-bpt" id="XSM-dZ-TFg"/>
-                        </connections>
-                    </tableView>
                     <navigationItem key="navigationItem" title="联系人" id="Cld-6h-jIi">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Ypb-XD-cR9"/>
                     </navigationItem>

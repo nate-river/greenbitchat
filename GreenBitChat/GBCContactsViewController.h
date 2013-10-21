@@ -8,5 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface GBCContactsViewController : UIViewController <UITableViewDataSource,UITableViewDelegate>
+@interface GBCContactsViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate, UISearchDisplayDelegate>
+@property(nonatomic, strong, readonly) UITableView *tableView;
+@property(nonatomic, strong, readonly) UISearchBar *searchBar;
 @end
