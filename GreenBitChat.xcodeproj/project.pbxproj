@@ -315,6 +315,7 @@
 		0BEB65431820F9C800A8578C /* idn-int.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "idn-int.h"; sourceTree = "<group>"; };
 		0BEB65441820F9C800A8578C /* libidn.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libidn.a; sourceTree = "<group>"; };
 		0BEB65451820F9C800A8578C /* stringprep.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stringprep.h; sourceTree = "<group>"; };
+		0BEB65491820FBAB00A8578C /* XMPPFramework.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMPPFramework.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -615,6 +616,7 @@
 		0B915F751820F68E00A709BF /* Xmpp */ = {
 			isa = PBXGroup;
 			children = (
+				0BEB65491820FBAB00A8578C /* XMPPFramework.h */,
 				0BEB64EE1820F99500A8578C /* Authentication */,
 				0BEB65021820F99500A8578C /* Categories */,
 				0BEB65091820F99500A8578C /* Core */,
