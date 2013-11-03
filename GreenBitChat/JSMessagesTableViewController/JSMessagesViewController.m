@@ -66,6 +66,7 @@
 	self.tableView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
 	self.tableView.dataSource = self;
 	self.tableView.delegate = self;
+    //self.tableView.contentInset = UIEdgeInsetsMake(, <#CGFloat left#>, <#CGFloat bottom#>, <#CGFloat right#>)
 	[self.view addSubview:self.tableView];
 	
     CGRect inputFrame = CGRectMake(0.0f, size.height - INPUT_HEIGHT, size.width, INPUT_HEIGHT);
@@ -329,7 +330,7 @@
         
         [UIView animateWithDuration:0.25f
                          animations:^{
-                             UIEdgeInsets insets = UIEdgeInsetsMake(0.0f,
+                             UIEdgeInsets insets = UIEdgeInsetsMake(64.0f,
                                                                     0.0f,
                                                                     self.tableView.contentInset.bottom + changeInHeight,
                                                                     0.0f);
@@ -391,7 +392,7 @@
                                                            inputViewFrame.size.width,
                                                            inputViewFrame.size.height);
                          
-                         UIEdgeInsets insets = UIEdgeInsetsMake(0.0f,
+                         UIEdgeInsets insets = UIEdgeInsetsMake(64.0f,
                                                                 0.0f,
                                                                 self.view.frame.size.height - self.inputToolBarView.frame.origin.y - INPUT_HEIGHT,
                                                                 0.0f);

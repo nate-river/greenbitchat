@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreData/CoreData.h>
 
-@interface GBCMessageViewController : UIViewController <UITableViewDelegate,UITableViewDataSource>
+
+@interface GBCMessageViewController : UIViewController <UITableViewDelegate,UITableViewDataSource, NSFetchedResultsControllerDelegate>{
+    NSFetchedResultsController *fetchedResultsController;
+}
 @property (nonatomic, strong) IBOutlet UITableView *tableView;
 @end

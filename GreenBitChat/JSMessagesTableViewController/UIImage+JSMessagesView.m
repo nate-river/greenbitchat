@@ -158,7 +158,8 @@
 // JeremyStone
 - (UIImage *)makeStretchableFlatOutgoing
 {
-  return [self resizableImageWithCapInsets:UIEdgeInsetsMake(14.0f, 15.0f, 14.0f, 20.0f)
+//    return self;
+  return [self resizableImageWithCapInsets:UIEdgeInsetsMake(17.0f, 15.0f, 17.0f, 20.0f)
                               resizingMode:UIImageResizingModeStretch];
 }
 

@@ -7,12 +7,16 @@
 //
 
 #import "GBCAppDelegate.h"
+#import "GBCXMPPManager.h"
 
 @implementation GBCAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    GBCXMPPManager *xmpp = [GBCXMPPManager sharedManager];
+    [xmpp connect];
     // Override point for customization after application launch.
+    
     return YES;
 }
 							
