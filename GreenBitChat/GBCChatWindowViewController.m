@@ -43,7 +43,7 @@
     
     self.delegate = self;
     self.dataSource = self;
-    self.title = [[self user] displayName];
+    self.title = [self displayName];
 
     
     self.messages = [[NSMutableArray alloc] initWithObjects:
@@ -87,15 +87,14 @@
     
     if (message.length > 0) {
         
-        NSString *jid = [[[[self user] jidStr] componentsSeparatedByString:@"@"] objectAtIndex:0];
-        NSString *domain = [[[[self user] jidStr] componentsSeparatedByString:@"@"] objectAtIndex:1];
+        NSString *jid = [[[self bareJidStr] componentsSeparatedByString:@"@"] objectAtIndex:0];
+        NSString *domain = [[[self bareJidStr] componentsSeparatedByString:@"@"] objectAtIndex:1];
         //生成消息对象
         XMPPMessage *mes=[XMPPMessage messageWithType:@"chat" to:[XMPPJID jidWithUser:jid domain:domain  resource:@"ios"]];
         [mes addChild:[DDXMLNode elementWithName:@"body" stringValue:message]];
         
         //发送消息
-        [[GBCXMPPManager sharedManager] sendMessage:mes];
-        
+        [[[GBCXMPPManager sharedManager] xmppStream] sendElement:mes];
     }
     
     [JSMessageSoundEffect playMessageSentSound];

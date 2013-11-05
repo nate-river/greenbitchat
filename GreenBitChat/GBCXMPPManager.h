@@ -17,11 +17,17 @@
 {
 	XMPPStream *xmppStream;
 	XMPPReconnect *xmppReconnect;
+    
     XMPPRoster *xmppRoster;
 	XMPPRosterCoreDataStorage *xmppRosterStorage;
+    
+    XMPPMessageArchiving *xmppMessageArchiving;
+    XMPPMessageArchivingCoreDataStorage *xmppMessageArchivingStorage;
+    
     XMPPvCardCoreDataStorage *xmppvCardStorage;
 	XMPPvCardTempModule *xmppvCardTempModule;
 	XMPPvCardAvatarModule *xmppvCardAvatarModule;
+    
 	XMPPCapabilities *xmppCapabilities;
 	XMPPCapabilitiesCoreDataStorage *xmppCapabilitiesStorage;
 	
@@ -36,20 +42,29 @@
 
 @property (nonatomic, strong, readonly) XMPPStream *xmppStream;
 @property (nonatomic, strong, readonly) XMPPReconnect *xmppReconnect;
+
 @property (nonatomic, strong, readonly) XMPPRoster *xmppRoster;
 @property (nonatomic, strong, readonly) XMPPRosterCoreDataStorage *xmppRosterStorage;
+
+@property (nonatomic, strong, readonly) XMPPMessageArchiving *xmppMessageArchiving;
+@property (nonatomic, strong, readonly) XMPPMessageArchivingCoreDataStorage *xmppMessageArchivingStorage;
+
+
 @property (nonatomic, strong, readonly) XMPPvCardTempModule *xmppvCardTempModule;
 @property (nonatomic, strong, readonly) XMPPvCardAvatarModule *xmppvCardAvatarModule;
+
 @property (nonatomic, strong, readonly) XMPPCapabilities *xmppCapabilities;
 @property (nonatomic, strong, readonly) XMPPCapabilitiesCoreDataStorage *xmppCapabilitiesStorage;
 
 
 - (NSManagedObjectContext *)managedObjectContext_roster;
 - (NSManagedObjectContext *)managedObjectContext_capabilities;
+- (NSManagedObjectContext *)managedObjectContext_messageArchiving;
 
 - (BOOL)connect;
 - (void)disconnect;
-- (void)sendMessage:(XMPPMessage *)aMessage;
+- (void)testMessageArchiving;
+
 
 + (GBCXMPPManager *)sharedManager;
 

@@ -31,6 +31,9 @@
 #import "XMPPRoster.h"
 #import "XMPPRosterCoreDataStorage.h"
 
+#import "XMPPMessageArchiving.h"
+#import "XMPPMessageArchivingCoreDataStorage.h"
+
 #import "XMPPvCardTempModule.h"
 #import "XMPPvCardAvatarModule.h"
 #import "XMPPvCardCoreDataStorage.h"

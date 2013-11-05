@@ -41,6 +41,7 @@ static const int ddLogLevel = LOG_LEVEL_INFO;
     self.searchBar.placeholder = @"Search";
     [self.searchBar sizeToFit];
     
+    //[[GBCXMPPManager sharedManager] testMessageArchiving];
     
     /*
      Default behavior:
@@ -233,7 +234,9 @@ static const int ddLogLevel = LOG_LEVEL_INFO;
         
         XMPPUserCoreDataStorageObject *user = [[self fetchedResultsController] objectAtIndexPath: indexPath];
         
-        destViewController.user = user;
+        //destViewController.user = user;
+        destViewController.bareJidStr = user.jidStr;
+        destViewController.displayName = user.displayName;
         
         destViewController.hidesBottomBarWhenPushed = YES;
     }

@@ -14,6 +14,10 @@
 
 @property (nonatomic, strong) XMPPUserCoreDataStorageObject *user;
 
+@property (nonatomic, strong) NSString *bareJidStr;
+@property (nonatomic, strong) NSString *displayName;
+
+
 @property (strong, nonatomic) NSMutableArray *messages;
 @property (strong, nonatomic) NSMutableArray *timestamps;
 

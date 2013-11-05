@@ -16,6 +16,7 @@
 #import "XMPPvCardAvatarModule.h"
 #import "XMPPvCardCoreDataStorage.h"
 
+
 #import "DDLog.h"
 #import "DDTTYLogger.h"
 
@@ -48,6 +49,9 @@ static const int ddLogLevel = LOG_LEVEL_INFO;
 @synthesize xmppvCardAvatarModule;
 @synthesize xmppCapabilities;
 @synthesize xmppCapabilitiesStorage;
+
+@synthesize xmppMessageArchiving;
+@synthesize xmppMessageArchivingStorage;
 
 #pragma mark  - Class Methods
 
@@ -104,6 +108,12 @@ static const int ddLogLevel = LOG_LEVEL_INFO;
 	return [xmppCapabilitiesStorage mainThreadManagedObjectContext];
 }
 
+- (NSManagedObjectContext *)managedObjectContext_messageArchiving;
+{
+	return [xmppMessageArchivingStorage mainThreadManagedObjectContext];
+}
+
+
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 #pragma mark Private
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -154,12 +164,18 @@ static const int ddLogLevel = LOG_LEVEL_INFO;
 	// But you do need to provide the roster with some storage facility.
 	
 	xmppRosterStorage = [[XMPPRosterCoreDataStorage alloc] init];
-    //	xmppRosterStorage = [[XMPPRosterCoreDataStorage alloc] initWithInMemoryStore];
+    //xmppRosterStorage = [[XMPPRosterCoreDataStorage alloc] initWithInMemoryStore];
 	
 	xmppRoster = [[XMPPRoster alloc] initWithRosterStorage:xmppRosterStorage];
 	
 	xmppRoster.autoFetchRoster = YES;
 	xmppRoster.autoAcceptKnownPresenceSubscriptionRequests = YES;
+    
+    // Setup messageArchiving
+    //xmppMessageArchivingStorage = [XMPPMessageArchivingCoreDataStorage sharedInstance];
+    xmppMessageArchivingStorage = [XMPPMessageArchivingCoreDataStorage sharedInstance];
+    xmppMessageArchiving = [[XMPPMessageArchiving alloc] initWithMessageArchivingStorage:xmppMessageArchivingStorage];
+
 	
 	// Setup vCard support
 	//
@@ -203,11 +219,14 @@ static const int ddLogLevel = LOG_LEVEL_INFO;
 	[xmppvCardTempModule   activate:xmppStream];
 	[xmppvCardAvatarModule activate:xmppStream];
 	[xmppCapabilities      activate:xmppStream];
+    [xmppMessageArchiving activate:xmppStream];
     
 	// Add ourself as a delegate to anything we may be interested in
     
 	[xmppStream addDelegate:self delegateQueue:dispatch_get_main_queue()];
 	[xmppRoster addDelegate:self delegateQueue:dispatch_get_main_queue()];
+    [xmppMessageArchiving  addDelegate:self delegateQueue:dispatch_get_main_queue()];
+
     
 	// Optional:
 	//
@@ -580,40 +599,31 @@ static const int ddLogLevel = LOG_LEVEL_INFO;
 	
 }
 
-#pragma  mark ------收发消息-------
-- (void)sendMessage:(XMPPMessage *)aMessage
-{
-    [xmppStream sendElement:aMessage];
-   
-    
-//    NSString *body = [[aMessage elementForName:@"body"] stringValue];
-//    // NSString *meesageStyle=[[aMessage attributeForName:@"type"] stringValue];
-//    NSString *meesageTo = [[aMessage to]bare];
-//    NSArray *strs=[meesageTo componentsSeparatedByString:@"@"];
-//    
-//    //创建message对象
-//    WCMessageObject *msg=[[WCMessageObject alloc]init];
-//    [msg setMessageDate:[NSDate date]];
-//    [msg setMessageFrom:[[NSUserDefaults standardUserDefaults]objectForKey:kMY_USER_ID]];
-//    
-//    [msg setMessageTo:strs[0]];
-//    //判断多媒体消息
-//    
-//    if ([[body substringToIndex:3]isEqualToString:@"[1]"]) {
-//        
-//        
-//        [msg setMessageType:[NSNumber numberWithInt:kWCMessageTypeImage]];
-//        body=[body substringFromIndex:3];
-//    }else
-//        [msg setMessageType:[NSNumber numberWithInt:kWCMessageTypePlain]];
-//    
-//    
-//    [msg setMessageContent:body];
-//    [WCMessageObject save:msg];
-    //发送全局通知
-    //    [[NSNotificationCenter defaultCenter]postNotificationName:kXMPPNewMsgNotifaction object:msg ];
-    //    [msg release];
-}
+#pragma mark messageArchiving
 
+-(void)testMessageArchiving{
+    XMPPMessageArchivingCoreDataStorage *storage = [XMPPMessageArchivingCoreDataStorage sharedInstance];
+    NSManagedObjectContext *moc = [storage mainThreadManagedObjectContext];
+    NSEntityDescription *entityDescription = [NSEntityDescription entityForName:@"XMPPMessageArchiving_Contact_CoreDataObject"
+                                                         inManagedObjectContext:moc];
+    NSFetchRequest *request = [[NSFetchRequest alloc]init];
+    [request setEntity:entityDescription];
+    NSError *error;
+    NSArray *messages = [moc executeFetchRequest:request error:&error];
+    
+    for (XMPPMessageArchiving_Message_CoreDataObject *message in messages) {
+        message;
+        NSLog(@"messageStr param is %@",message.bareJidStr);
+//        NSXMLElement *element = [[NSXMLElement alloc] initWithXMLString:message.messageStr error:nil];
+//        NSLog(@"to param is %@",[element attributeStringValueForName:@"to"]);
+//        NSLog(@"NSCore object id param is %@",message.objectID);
+//        NSLog(@"bareJid param is %@",message.bareJid);
+//        NSLog(@"bareJidStr param is %@",message.bareJidStr);
+//        NSLog(@"body param is %@",message.body);
+//        NSLog(@"timestamp param is %@",message.timestamp);
+//        NSLog(@"outgoing param is %d",[message.outgoing intValue]);
+    }
+    //[self print:[[NSMutableArray alloc]initWithArray:messages]];
+}
 
 @end
