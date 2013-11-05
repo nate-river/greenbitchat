@@ -38,8 +38,7 @@ static const int ddLogLevel = LOG_LEVEL_INFO;
 {
     
     [super viewDidLoad];
-//    contacs = [self fetchRecentContacts];
-//    recipes = [NSArray arrayWithObjects:@"Egg Benedict", @"Mushroom Risotto", @"Full Breakfast", @"Hamburger", @"Ham and Egg Sandwich", @"Creme Brelee", @"White Chocolate Donut", @"Starbucks Coffee", @"Vegetable Curry", @"Instant Noodle with Egg", @"Noodle with BBQ Pork", @"Japanese Noodle with Pork", @"Green Tea", @"Thai Shrimp Cake", @"Angry Birds Cake", @"Ham and Cheese Panini", nil];
+
 }
 
 
@@ -48,37 +47,6 @@ static const int ddLogLevel = LOG_LEVEL_INFO;
     [super didReceiveMemoryWarning];
 }
 
-//- (NSArray *) fetchRecentContacts
-//{
-//    GBCXMPPManager *xmpp = [GBCXMPPManager sharedManager];
-//    
-//    NSManagedObjectContext *moc = [xmpp managedObjectContext_messageArchiving];
-//    
-//    NSEntityDescription *entity = [NSEntityDescription entityForName:@"XMPPMessageArchiving_Contact_CoreDataObject"
-//                                              inManagedObjectContext:moc];
-//    
-//    NSFetchRequest *request = [[NSFetchRequest alloc]init];
-//    [request setEntity:entity];
-//    NSError *error;
-//    NSArray *list = [moc executeFetchRequest:request error:&error];
-//    return list;
-//}
-//
-//- (NSArray *) fetchMessages:(NSString *) bareJidStr
-//{
-//    GBCXMPPManager *xmpp = [GBCXMPPManager sharedManager];
-//    
-//    NSManagedObjectContext *moc = [xmpp managedObjectContext_messageArchiving];
-//    
-//    NSEntityDescription *entity = [NSEntityDescription entityForName:@"XMPPMessageArchiving_Message_CoreDataObject"
-//                                              inManagedObjectContext:moc];
-//    
-//    NSFetchRequest *request = [[NSFetchRequest alloc]init];
-//    [request setEntity:entity];
-//    NSError *error;
-//    NSArray *list = [moc executeFetchRequest:request error:&error];
-//    return list;
-//}
 
 #pragma mark - coredata
 - (NSFetchedResultsController *)fetchedResultsController
@@ -229,6 +197,25 @@ static const int ddLogLevel = LOG_LEVEL_INFO;
 
             destViewController.bareJidStr = contact.bareJidStr;
             destViewController.displayName = contact.bareJidStr;
+            
+            NSMutableArray  *messages = [[GBCXMPPManager sharedManager] fetchMessages];
+            NSMutableArray *tmp = [[NSMutableArray alloc] init];
+            NSMutableArray *tmp2 = [[NSMutableArray alloc] init];
+            for ( XMPPMessageArchiving_Message_CoreDataObject *message in messages){
+
+                if ([message.bareJidStr isEqualToString:contact.bareJidStr]) {
+                    NSString *flag = [[[message.messageStr componentsSeparatedByString:@" "] objectAtIndex:2] substringToIndex:4];
+
+                    if ( [flag isEqualToString:@"from"] ) {
+                        [tmp addObject:[@"you_" stringByAppendingString:message.body]];
+                    }else{
+                        [tmp addObject:[@"me_" stringByAppendingString:message.body]];
+                    }
+                    [tmp2 addObject:message.timestamp];
+                }
+            }
+            destViewController.messages = tmp;
+            destViewController.timestamps = tmp2;
         }
         destViewController.hidesBottomBarWhenPushed = YES;
     }

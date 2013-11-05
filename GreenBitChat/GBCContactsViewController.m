@@ -234,9 +234,27 @@ static const int ddLogLevel = LOG_LEVEL_INFO;
         
         XMPPUserCoreDataStorageObject *user = [[self fetchedResultsController] objectAtIndexPath: indexPath];
         
-        //destViewController.user = user;
         destViewController.bareJidStr = user.jidStr;
         destViewController.displayName = user.displayName;
+        
+        NSMutableArray  *messages = [[GBCXMPPManager sharedManager] fetchMessages];
+        NSMutableArray *tmp = [[NSMutableArray alloc] init];
+        NSMutableArray *tmp2 = [[NSMutableArray alloc] init];
+        for ( XMPPMessageArchiving_Message_CoreDataObject *message in messages){
+            
+            if ([message.bareJidStr isEqualToString:user.jidStr]) {
+                NSString *flag = [[[message.messageStr componentsSeparatedByString:@" "] objectAtIndex:2] substringToIndex:4];
+                
+                if ( [flag isEqualToString:@"from"] ) {
+                    [tmp addObject:[@"you_" stringByAppendingString:message.body]];
+                }else{
+                    [tmp addObject:[@"me_" stringByAppendingString:message.body]];
+                }
+                [tmp2 addObject:message.timestamp];
+            }
+        }
+        destViewController.messages = tmp;
+        destViewController.timestamps = tmp2;
         
         destViewController.hidesBottomBarWhenPushed = YES;
     }

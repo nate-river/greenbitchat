@@ -64,7 +64,7 @@
 - (BOOL)connect;
 - (void)disconnect;
 - (void)testMessageArchiving;
-
+- (NSMutableArray *) fetchMessages;
 
 + (GBCXMPPManager *)sharedManager;
 

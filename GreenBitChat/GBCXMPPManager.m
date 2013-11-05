@@ -601,29 +601,21 @@ static const int ddLogLevel = LOG_LEVEL_INFO;
 
 #pragma mark messageArchiving
 
--(void)testMessageArchiving{
+- (NSMutableArray *)fetchMessages
+{
     XMPPMessageArchivingCoreDataStorage *storage = [XMPPMessageArchivingCoreDataStorage sharedInstance];
     NSManagedObjectContext *moc = [storage mainThreadManagedObjectContext];
-    NSEntityDescription *entityDescription = [NSEntityDescription entityForName:@"XMPPMessageArchiving_Contact_CoreDataObject"
-                                                         inManagedObjectContext:moc];
-    NSFetchRequest *request = [[NSFetchRequest alloc]init];
-    [request setEntity:entityDescription];
-    NSError *error;
-    NSArray *messages = [moc executeFetchRequest:request error:&error];
     
-    for (XMPPMessageArchiving_Message_CoreDataObject *message in messages) {
-        message;
-        NSLog(@"messageStr param is %@",message.bareJidStr);
-//        NSXMLElement *element = [[NSXMLElement alloc] initWithXMLString:message.messageStr error:nil];
-//        NSLog(@"to param is %@",[element attributeStringValueForName:@"to"]);
-//        NSLog(@"NSCore object id param is %@",message.objectID);
-//        NSLog(@"bareJid param is %@",message.bareJid);
-//        NSLog(@"bareJidStr param is %@",message.bareJidStr);
-//        NSLog(@"body param is %@",message.body);
-//        NSLog(@"timestamp param is %@",message.timestamp);
-//        NSLog(@"outgoing param is %d",[message.outgoing intValue]);
-    }
-    //[self print:[[NSMutableArray alloc]initWithArray:messages]];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"XMPPMessageArchiving_Message_CoreDataObject"
+                                              inManagedObjectContext:moc];
+    
+    NSFetchRequest *request = [[NSFetchRequest alloc]init];
+    [request setEntity:entity];
+    NSError *error;
+    NSArray *list = [moc executeFetchRequest:request error:&error];
+    NSMutableArray *temp = [list mutableCopy];
+    
+    return temp;
 }
 
 @end

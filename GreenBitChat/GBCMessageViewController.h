@@ -13,6 +13,7 @@
 @interface GBCMessageViewController : UIViewController <UITableViewDelegate,UITableViewDataSource,NSFetchedResultsControllerDelegate>{
     NSFetchedResultsController *fetchedResultsController;
 }
+- (NSMutableArray *) fetchMessages;
 
 @property (nonatomic, strong) IBOutlet UITableView *tableView;
 @end

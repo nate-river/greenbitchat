@@ -46,13 +46,14 @@
     self.title = [self displayName];
 
     
-    self.messages = [[NSMutableArray alloc] initWithObjects:
-                     @"you_我已经添加你为好友，我们聊天吧",
-                     nil];
-    
-    self.timestamps = [[NSMutableArray alloc] initWithObjects:
-                       [NSDate date],
-                       nil];
+//    self.messages = [[NSMutableArray alloc] initWithObjects:
+//                     @"you_我已经添加你为好友，我们聊天吧",
+//                     nil];
+//    self.messages = self.messages;
+//    
+//    self.timestamps = [[NSMutableArray alloc] initWithObjects:
+//                       [NSDate date],
+//                       nil];
 }
 
 - (void)didReceiveMemoryWarning
