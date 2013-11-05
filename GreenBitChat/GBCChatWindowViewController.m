@@ -7,6 +7,10 @@
 //
 
 #import "GBCChatWindowViewController.h"
+#import "GBCXMPPManager.h"
+#import "XMPPRosterCoreDataStorage.h"
+
+
 
 @interface GBCChatWindowViewController ()
 
@@ -14,8 +18,6 @@
 
 @implementation GBCChatWindowViewController
 
-@synthesize recipeLabel;
-@synthesize recipeName;
 
 
 - (UIButton *)sendButton
@@ -26,27 +28,29 @@
 }
 
 
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    //recipeLabel.text = recipeName;
+    NSNotificationCenter *nc = [NSNotificationCenter defaultCenter];
+    //添加观察者
+    [nc addObserver:self
+           selector:@selector(handleMessageIncome:)
+               name:@"GBCsendMessage"
+             object:nil];
+    NSLog(@"Registered with notification center");
     
     self.delegate = self;
     self.dataSource = self;
-    self.title = @"Messages";
+    self.title = [[self user] displayName];
+
     
     self.messages = [[NSMutableArray alloc] initWithObjects:
-                     @"测试一下我们的信息发送",
-                     @"图片有三种样式的嘛？",
-                     @"对的.下一步准备加入滑动弹弹的效果！",
-                     @"好吧！你们加油吧！做到这个对你来说应该是很随意的吧？沃兹？",
+                     @"you_我已经添加你为好友，我们聊天吧",
                      nil];
     
     self.timestamps = [[NSMutableArray alloc] initWithObjects:
-                       [NSDate distantPast],
-                       [NSDate distantPast],
-                       [NSDate distantPast],
                        [NSDate date],
                        nil];
 }
@@ -63,6 +67,7 @@
     GBCChatWindowViewController *vc = [[GBCChatWindowViewController alloc] initWithNibName:nil bundle:nil];
     [self.navigationController pushViewController:vc animated:YES];
 }
+
 #pragma mark - Table view data source
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
@@ -72,21 +77,53 @@
 #pragma mark - Messages view delegate
 - (void)sendPressed:(UIButton *)sender withText:(NSString *)text
 {
-    [self.messages addObject:text];
+    [self.messages addObject: [@"me_" stringByAppendingString:text]];
     
     [self.timestamps addObject:[NSDate date]];
     
-    if((self.messages.count - 1) % 2)
-        [JSMessageSoundEffect playMessageSentSound];
-    else
-        [JSMessageSoundEffect playMessageReceivedSound];
     
+    NSString *message = text;
+    
+    
+    if (message.length > 0) {
+        
+        NSString *jid = [[[[self user] jidStr] componentsSeparatedByString:@"@"] objectAtIndex:0];
+        NSString *domain = [[[[self user] jidStr] componentsSeparatedByString:@"@"] objectAtIndex:1];
+        //生成消息对象
+        XMPPMessage *mes=[XMPPMessage messageWithType:@"chat" to:[XMPPJID jidWithUser:jid domain:domain  resource:@"ios"]];
+        [mes addChild:[DDXMLNode elementWithName:@"body" stringValue:message]];
+        
+        //发送消息
+        [[GBCXMPPManager sharedManager] sendMessage:mes];
+        
+    }
+    
+    [JSMessageSoundEffect playMessageSentSound];
+    
+    [self finishSend];
+}
+
+- (void) handleMessageIncome:(NSNotification *)message
+{
+    NSLog(@"Received notification: %@", [[message userInfo] objectForKey:@"user"]);
+    //XMPPUserCoreDataStorageObject *user = [[message userInfo] objectForKey:@"user"];
+    NSString *text = [[message userInfo] objectForKey:@"message"];
+    
+    [self.messages addObject:[@"you_" stringByAppendingString:text]];
+    [self.timestamps addObject:[NSDate date]];
+    [JSMessageSoundEffect playMessageReceivedSound];
     [self finishSend];
 }
 
 - (JSBubbleMessageType)messageTypeForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return (indexPath.row % 2) ? JSBubbleMessageTypeIncoming : JSBubbleMessageTypeOutgoing;
+    NSString *message = [self.messages objectAtIndex:indexPath.row];
+    NSString *idifiter = [[message componentsSeparatedByString:@"_"] objectAtIndex:0];
+    if ([idifiter isEqualToString:@"me"]) {
+        return JSBubbleMessageTypeOutgoing;
+    }else{
+        return JSBubbleMessageTypeIncoming;
+    }
 }
 
 - (JSBubbleMessageStyle)messageStyleForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -123,7 +160,7 @@
 #pragma mark - Messages view data source
 - (NSString *)textForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return [self.messages objectAtIndex:indexPath.row];
+    return [[[self.messages objectAtIndex:indexPath.row] componentsSeparatedByString:@"_"] objectAtIndex:1];
 }
 
 - (NSDate *)timestampForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -140,6 +177,7 @@
 {
     return [UIImage imageNamed:@"demo-avatar-jobs"];
 }
+
 
 
 

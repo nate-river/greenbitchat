@@ -478,26 +478,38 @@ static const int ddLogLevel = LOG_LEVEL_INFO;
 		                                               managedObjectContext:[self managedObjectContext_roster]];
 		
 		NSString *body = [[message elementForName:@"body"] stringValue];
-		NSString *displayName = [user displayName];
+		//NSString *displayName = [user displayName];
         
-		if ([[UIApplication sharedApplication] applicationState] == UIApplicationStateActive)
-		{
-			UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:displayName
-                                                                message:body
-                                                               delegate:nil
-                                                      cancelButtonTitle:@"Ok"
-                                                      otherButtonTitles:nil];
-			[alertView show];
-		}
-		else
-		{
-			// We are not active, so use a local notification instead
-			UILocalNotification *localNotification = [[UILocalNotification alloc] init];
-			localNotification.alertAction = @"Ok";
-			localNotification.alertBody = [NSString stringWithFormat:@"From: %@\n\n%@",displayName,body];
-            
-			[[UIApplication sharedApplication] presentLocalNotificationNow:localNotification];
-		}
+        //NSDictionary *info = [NSDictionary dictionaryWithObject:user forKey:@"user"];
+        
+        NSArray *u = [NSArray arrayWithObjects:user,body, nil];
+        NSArray *k = [NSArray arrayWithObjects:@"user",@"message",nil];
+        
+        NSDictionary *info = [NSDictionary dictionaryWithObjects:u forKeys:k];
+        NSNotificationCenter *nc = [NSNotificationCenter defaultCenter];
+        //NSLog(@"Sending notification");
+        //发送notificaton
+        [nc postNotificationName:@"GBCsendMessage" object:self userInfo:info];
+
+        
+//		if ([[UIApplication sharedApplication] applicationState] == UIApplicationStateActive)
+//		{
+//			UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:displayName
+//                                                                message:body
+//                                                               delegate:nil
+//                                                      cancelButtonTitle:@"Ok"
+//                                                      otherButtonTitles:nil];
+//			[alertView show];
+//		}
+//		else
+//		{
+//			// We are not active, so use a local notification instead
+//			UILocalNotification *localNotification = [[UILocalNotification alloc] init];
+//			localNotification.alertAction = @"Ok";
+//			localNotification.alertBody = [NSString stringWithFormat:@"From: %@\n\n%@",displayName,body];
+//            
+//			[[UIApplication sharedApplication] presentLocalNotificationNow:localNotification];
+//		}
 	}
 }
 
@@ -567,4 +579,41 @@ static const int ddLogLevel = LOG_LEVEL_INFO;
 	}
 	
 }
+
+#pragma  mark ------收发消息-------
+- (void)sendMessage:(XMPPMessage *)aMessage
+{
+    [xmppStream sendElement:aMessage];
+   
+    
+//    NSString *body = [[aMessage elementForName:@"body"] stringValue];
+//    // NSString *meesageStyle=[[aMessage attributeForName:@"type"] stringValue];
+//    NSString *meesageTo = [[aMessage to]bare];
+//    NSArray *strs=[meesageTo componentsSeparatedByString:@"@"];
+//    
+//    //创建message对象
+//    WCMessageObject *msg=[[WCMessageObject alloc]init];
+//    [msg setMessageDate:[NSDate date]];
+//    [msg setMessageFrom:[[NSUserDefaults standardUserDefaults]objectForKey:kMY_USER_ID]];
+//    
+//    [msg setMessageTo:strs[0]];
+//    //判断多媒体消息
+//    
+//    if ([[body substringToIndex:3]isEqualToString:@"[1]"]) {
+//        
+//        
+//        [msg setMessageType:[NSNumber numberWithInt:kWCMessageTypeImage]];
+//        body=[body substringFromIndex:3];
+//    }else
+//        [msg setMessageType:[NSNumber numberWithInt:kWCMessageTypePlain]];
+//    
+//    
+//    [msg setMessageContent:body];
+//    [WCMessageObject save:msg];
+    //发送全局通知
+    //    [[NSNotificationCenter defaultCenter]postNotificationName:kXMPPNewMsgNotifaction object:msg ];
+    //    [msg release];
+}
+
+
 @end

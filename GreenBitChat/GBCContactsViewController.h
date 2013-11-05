@@ -14,8 +14,8 @@
     
     NSFetchedResultsController *fetchedResultsController;
 }
+@property (strong, nonatomic) IBOutlet UITableView *tableView;
 
-@property(nonatomic, strong, readonly) UITableView *tableView;
-@property(nonatomic, strong, readonly) UISearchBar *searchBar;
+@property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
 
 @end

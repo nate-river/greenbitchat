@@ -185,6 +185,7 @@
 		0B915F141820F34C00A709BF /* DDXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B915F0E1820F34C00A709BF /* DDXMLNode.m */; };
 		0B915F161820F58000A709BF /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B915F151820F58000A709BF /* libxml2.dylib */; };
 		0B915F211820F62000A709BF /* libresolv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B915F201820F62000A709BF /* libresolv.dylib */; };
+		0BCBC7AE1828D11D00429710 /* chatHistory.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0BCBC7AD1828D11D00429710 /* chatHistory.plist */; };
 		0BEB652A1820F99500A8578C /* XMPPAnonymousAuthentication.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BEB64F11820F99500A8578C /* XMPPAnonymousAuthentication.m */; };
 		0BEB652B1820F99500A8578C /* XMPPDeprecatedDigestAuthentication.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BEB64F41820F99500A8578C /* XMPPDeprecatedDigestAuthentication.m */; };
 		0BEB652C1820F99500A8578C /* XMPPDeprecatedPlainAuthentication.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BEB64F71820F99500A8578C /* XMPPDeprecatedPlainAuthentication.m */; };
@@ -210,6 +211,7 @@
 		0BEB65401820F99500A8578C /* XMPPStringPrep.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BEB65291820F99500A8578C /* XMPPStringPrep.m */; };
 		0BEB65461820F9C800A8578C /* build-libidn.sh in Resources */ = {isa = PBXBuildFile; fileRef = 0BEB65421820F9C800A8578C /* build-libidn.sh */; };
 		0BEB65471820F9C800A8578C /* libidn.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BEB65441820F9C800A8578C /* libidn.a */; };
+		0BFE4FE21826805700F66F7E /* defaultPerson.png in Resources */ = {isa = PBXBuildFile; fileRef = 0BFE4FE11826805700F66F7E /* defaultPerson.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -525,6 +527,7 @@
 		0B915F101820F34C00A709BF /* DDXMLPrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDXMLPrivate.h; sourceTree = "<group>"; };
 		0B915F151820F58000A709BF /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
 		0B915F201820F62000A709BF /* libresolv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libresolv.dylib; path = usr/lib/libresolv.dylib; sourceTree = SDKROOT; };
+		0BCBC7AD1828D11D00429710 /* chatHistory.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = chatHistory.plist; sourceTree = "<group>"; };
 		0BEB64F01820F99500A8578C /* XMPPAnonymousAuthentication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMPPAnonymousAuthentication.h; sourceTree = "<group>"; };
 		0BEB64F11820F99500A8578C /* XMPPAnonymousAuthentication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMPPAnonymousAuthentication.m; sourceTree = "<group>"; };
 		0BEB64F31820F99500A8578C /* XMPPDeprecatedDigestAuthentication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMPPDeprecatedDigestAuthentication.h; sourceTree = "<group>"; };
@@ -580,6 +583,7 @@
 		0BEB65441820F9C800A8578C /* libidn.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libidn.a; sourceTree = "<group>"; };
 		0BEB65451820F9C800A8578C /* stringprep.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stringprep.h; sourceTree = "<group>"; };
 		0BEB65491820FBAB00A8578C /* XMPPFramework.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMPPFramework.h; sourceTree = "<group>"; };
+		0BFE4FE11826805700F66F7E /* defaultPerson.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = defaultPerson.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1277,6 +1281,7 @@
 		0B3964DE180E6A9200AEA17A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				0BFE4FE11826805700F66F7E /* defaultPerson.png */,
 				0B1739181814D32700616295 /* demo-avatar-jobs.png */,
 				0B1739191814D32700616295 /* demo-avatar-woz.png */,
 				0B17388E181135F600616295 /* Top100FamousPersons.plist */,
@@ -1284,6 +1289,7 @@
 				0B3964E0180E6A9200AEA17A /* InfoPlist.strings */,
 				0B3964E3180E6A9200AEA17A /* main.m */,
 				0B3964E5180E6A9200AEA17A /* GreenBitChat-Prefix.pch */,
+				0BCBC7AD1828D11D00429710 /* chatHistory.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -1629,6 +1635,7 @@
 				0B17388F181135F600616295 /* Top100FamousPersons.plist in Resources */,
 				0B1739011814339E00616295 /* bubble-square-incoming@2x.png in Resources */,
 				0BEB65461820F9C800A8578C /* build-libidn.sh in Resources */,
+				0BFE4FE21826805700F66F7E /* defaultPerson.png in Resources */,
 				0B17390C1814339E00616295 /* input-field.png in Resources */,
 				0B1738FA1814339E00616295 /* bubble-flat-outgoing-selected.png in Resources */,
 				0B1739101814339E00616295 /* send.png in Resources */,
@@ -1649,6 +1656,7 @@
 				0B1739051814339E00616295 /* bubble-square-outgoing@2x.png in Resources */,
 				0B17390B1814339E00616295 /* input-bar@2x.png in Resources */,
 				0B1738EF1814339E00616295 /* bubble-default-outgoing-green@2x.png in Resources */,
+				0BCBC7AE1828D11D00429710 /* chatHistory.plist in Resources */,
 				0B1738FC1814339E00616295 /* bubble-flat-outgoing.png in Resources */,
 				0B1738FB1814339E00616295 /* bubble-flat-outgoing-selected@2x.png in Resources */,
 				0B1739001814339E00616295 /* bubble-square-incoming.png in Resources */,

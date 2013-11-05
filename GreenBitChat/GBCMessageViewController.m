@@ -123,11 +123,11 @@
         if ([self.searchDisplayController isActive])
         {
             indexPath = [self.searchDisplayController.searchResultsTableView indexPathForSelectedRow];
-            destViewController.recipeName = [searchResults objectAtIndex:indexPath.row];
+            //destViewController.name = [searchResults objectAtIndex:indexPath.row];
         } else
         {
             indexPath = [self.tableView indexPathForSelectedRow];
-            destViewController.recipeName = [recipes objectAtIndex:indexPath.row];
+            //destViewController.name = [recipes objectAtIndex:indexPath.row];
         }
         destViewController.hidesBottomBarWhenPushed = YES;
     }

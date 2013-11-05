@@ -49,9 +49,10 @@
 
 - (BOOL)connect;
 - (void)disconnect;
-
+- (void)sendMessage:(XMPPMessage *)aMessage;
 
 + (GBCXMPPManager *)sharedManager;
+
 
 @end
 

@@ -8,12 +8,16 @@
 
 #import <UIKit/UIKit.h>
 #import "JSMessagesViewController.h"
-
+#import "XMPPMessage.h"
+#import "XMPPUserCoreDataStorageObject.h"
 @interface GBCChatWindowViewController : JSMessagesViewController <JSMessagesViewDelegate, JSMessagesViewDataSource>
-@property (nonatomic, strong) IBOutlet UILabel *recipeLabel;
-@property (nonatomic, strong) NSString *recipeName;
+
+@property (nonatomic, strong) XMPPUserCoreDataStorageObject *user;
 
 @property (strong, nonatomic) NSMutableArray *messages;
 @property (strong, nonatomic) NSMutableArray *timestamps;
+
+- (void)handleMessageIncome:(XMPPMessage *)aMessage;
+
 
 @end
