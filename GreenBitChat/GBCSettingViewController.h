@@ -10,4 +10,16 @@
 #import "JSMessagesViewController.h"
 
 @interface GBCSettingViewController : UIViewController <UITableViewDataSource,UITableViewDelegate>
+{
+    UIImageView *_avatarImageView;
+    UILabel *_nameLabel;
+    UILabel *_twitterUsernameLabel;
+    UILabel *_twitterUserIDLabel;
+}
+
+@property (nonatomic, retain) IBOutlet UIImageView *avatarImageView;
+@property (nonatomic, retain) IBOutlet UILabel *nameLabel;
+@property (nonatomic, retain) IBOutlet UILabel *twitterUsernameLabel;
+@property (nonatomic, retain) IBOutlet UILabel *twitterUserIDLabel;
+
 @end

@@ -8,6 +8,16 @@
 
 #import "GBCSettingViewController.h"
 
+enum {
+	InformationSectionIndex,
+} ProfileSectionIndicies;
+
+enum {
+	BioRowIndex,
+	LocationRowIndex,
+	WebsiteRowIndex,
+} InformationSectionRowIndicies;
+
 @interface GBCSettingViewController ()
 
 @end
@@ -27,58 +37,61 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
-    return 6;
-}
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
-    }
-    UILabel *label;
-    
-    if (indexPath.row == 0) {
-       
-        //image = (UIImage *)[cell viewWithTag:0];
-        //image.imageView.image = [UIImage imageNamed:@"defaultPerson"];
 
-        label = (UILabel *)[cell viewWithTag:1];
-        label.text = @"徐渭";
-        
-        label = (UILabel *)[cell viewWithTag:2];
-        label.text = @"google company";
-        
-    } else if (indexPath.row == 1) {
-        cell.textLabel.text = @"精品问答";
-        cell.detailTextLabel.text = @"cc";
+#pragma mark - UITableViewDataSource
 
-    } else if (indexPath.row == 2) {
-        cell.detailTextLabel.text = @"cc";
-        cell.textLabel.text = @"精选资料";
-    } else if (indexPath.row == 3){
-        cell.textLabel.text = @"最新活动";
-    } else if (indexPath.row == 4){
-        cell.textLabel.text = @"5";
-    }else if (indexPath.row == 5){
-        cell.textLabel.text = @"6";
-    }
-    
-    //cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-    
-    return cell;
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 1;
 }
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    
-    //    if (tableView == self.searchDisplayController.searchResultsTableView)
-    //    {
-    //        [self performSegueWithIdentifier: @"showChatWindow" sender: self ];
-    //    }
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return 3;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    switch (indexPath.row) {
+        case BioRowIndex:
+            return 77.0f;
+        default:
+            return tableView.rowHeight;
+    }
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell * cell = nil;
+	
+	switch (indexPath.row) {
+		case BioRowIndex:
+			cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault
+										   reuseIdentifier:nil];
+			cell.textLabel.text = NSLocalizedString(@"Hacker from the Rustbelt, living in Austin, TX. iOS Developer at @gowalla, and co-founder of @austinrb", nil);
+			cell.textLabel.font = [UIFont systemFontOfSize:14];
+            cell.textLabel.numberOfLines = 0;
+			cell.selectionStyle = UITableViewCellSelectionStyleNone;
+			break;
+		case LocationRowIndex:
+			cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue2
+										   reuseIdentifier:nil];
+			cell.textLabel.text = NSLocalizedString(@"location", nil);
+			cell.detailTextLabel.text = NSLocalizedString(@"Austin, TX", nil);
+			cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+			break;
+		case WebsiteRowIndex:
+			cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue2
+										   reuseIdentifier:nil];
+			cell.textLabel.text = @"web";
+			cell.detailTextLabel.text = @"http://mattt.me";
+			cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+			break;
+	}
+	
+	return cell;
+}
+
+#pragma mark - UITableViewDelegate
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+	[tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 @end
