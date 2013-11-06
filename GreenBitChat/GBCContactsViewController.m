@@ -158,13 +158,14 @@ static const int ddLogLevel = LOG_LEVEL_INFO;
 	
 	cell.textLabel.text = user.displayName;
     
-    GBCXMPPManager *xmpp = [GBCXMPPManager sharedManager];
-    NSData *photoData = [[ xmpp xmppvCardAvatarModule] photoDataForJID:user.jid];
+    //GBCXMPPManager *xmpp = [GBCXMPPManager sharedManager];
+    //XMPPvCardCoreDataStorage *v  = [[ xmpp xmppvCardAvatarModule] init];
+    //[v vCardTempForJID:user.jidStr];
     
-    if (photoData != nil)
-        cell.imageView.image = [UIImage imageWithData:photoData];
-    else
-        cell.imageView.image = [UIImage imageNamed:@"defaultPerson"];
+    //if (photoData != nil)
+     //   cell.imageView.image = [UIImage imageWithData:photoData];
+    //else
+    cell.imageView.image = [UIImage imageNamed:@"defaultPerson"];
     
 	//[self configurePhotoForCell:cell user:user];
 	
