@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 #import "JSMessagesViewController.h"
 
-@interface GBCSettingViewController : UIViewController
+@interface GBCSettingViewController : UIViewController <UITableViewDataSource,UITableViewDelegate>
 @end

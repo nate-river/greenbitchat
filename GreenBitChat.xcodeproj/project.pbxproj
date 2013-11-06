@@ -1259,7 +1259,6 @@
 				0B17389B1814339E00616295 /* JSMessagesTableViewController */,
 				0B3964E6180E6A9200AEA17A /* GBCAppDelegate.h */,
 				0B3964E7180E6A9200AEA17A /* GBCAppDelegate.m */,
-				0B3964E9180E6A9200AEA17A /* Main.storyboard */,
 				0B3964EC180E6A9200AEA17A /* GBCMessageViewController.h */,
 				0B3964ED180E6A9200AEA17A /* GBCMessageViewController.m */,
 				0B3964EF180E6A9200AEA17A /* GBCContactsViewController.h */,
@@ -1268,12 +1267,12 @@
 				0B33E645182241E600743AD3 /* GBCXMPPManager.m */,
 				0B17388B1810D8FC00616295 /* GBCChatWindowViewController.h */,
 				0B17388C1810D8FC00616295 /* GBCChatWindowViewController.m */,
-				0B3964F2180E6A9200AEA17A /* Images.xcassets */,
-				0B3964DE180E6A9200AEA17A /* Supporting Files */,
+				0B3964E9180E6A9200AEA17A /* Main.storyboard */,
 				0B1738951813BFFF00616295 /* GBCDiscoverViewController.h */,
 				0B1738961813BFFF00616295 /* GBCDiscoverViewController.m */,
 				0B1738981813C37A00616295 /* GBCSettingViewController.h */,
 				0B1738991813C37A00616295 /* GBCSettingViewController.m */,
+				0B3964DE180E6A9200AEA17A /* Supporting Files */,
 			);
 			path = GreenBitChat;
 			sourceTree = "<group>";
@@ -1281,6 +1280,7 @@
 		0B3964DE180E6A9200AEA17A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				0B3964F2180E6A9200AEA17A /* Images.xcassets */,
 				0BFE4FE11826805700F66F7E /* defaultPerson.png */,
 				0B1739181814D32700616295 /* demo-avatar-jobs.png */,
 				0B1739191814D32700616295 /* demo-avatar-woz.png */,
