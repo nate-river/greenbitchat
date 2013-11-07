@@ -212,6 +212,7 @@
 		0BEB65461820F9C800A8578C /* build-libidn.sh in Resources */ = {isa = PBXBuildFile; fileRef = 0BEB65421820F9C800A8578C /* build-libidn.sh */; };
 		0BEB65471820F9C800A8578C /* libidn.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BEB65441820F9C800A8578C /* libidn.a */; };
 		0BFE4FE21826805700F66F7E /* defaultPerson.png in Resources */ = {isa = PBXBuildFile; fileRef = 0BFE4FE11826805700F66F7E /* defaultPerson.png */; };
+		0BFED5F3182B4695006A31E8 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BFED5F2182B4695006A31E8 /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -584,6 +585,7 @@
 		0BEB65451820F9C800A8578C /* stringprep.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stringprep.h; sourceTree = "<group>"; };
 		0BEB65491820FBAB00A8578C /* XMPPFramework.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMPPFramework.h; sourceTree = "<group>"; };
 		0BFE4FE11826805700F66F7E /* defaultPerson.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = defaultPerson.png; sourceTree = "<group>"; };
+		0BFED5F2182B4695006A31E8 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -591,6 +593,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0BFED5F3182B4695006A31E8 /* QuartzCore.framework in Frameworks */,
 				0B915F211820F62000A709BF /* libresolv.dylib in Frameworks */,
 				0B915F161820F58000A709BF /* libxml2.dylib in Frameworks */,
 				0B3964DA180E6A9200AEA17A /* CoreGraphics.framework in Frameworks */,
@@ -1242,6 +1245,7 @@
 		0B3964D6180E6A9200AEA17A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0BFED5F2182B4695006A31E8 /* QuartzCore.framework */,
 				0B915F201820F62000A709BF /* libresolv.dylib */,
 				0B915F151820F58000A709BF /* libxml2.dylib */,
 				0B3964D7180E6A9200AEA17A /* Foundation.framework */,

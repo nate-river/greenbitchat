@@ -8,15 +8,6 @@
 
 #import "GBCSettingViewController.h"
 
-enum {
-	InformationSectionIndex,
-} ProfileSectionIndicies;
-
-enum {
-	BioRowIndex,
-	LocationRowIndex,
-	WebsiteRowIndex,
-} InformationSectionRowIndicies;
 
 @interface GBCSettingViewController ()
 
@@ -28,6 +19,7 @@ enum {
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
 	// Do any additional setup after loading the view.
 }
 
@@ -36,62 +28,70 @@ enum {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-
-#pragma mark - UITableViewDataSource
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 1;
+#pragma mark - tableView dataSource
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+	return 3;
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 3;
-}
-
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    switch (indexPath.row) {
-        case BioRowIndex:
-            return 77.0f;
-        default:
-            return tableView.rowHeight;
+- (NSInteger)tableView:(UITableView *)tableView
+ numberOfRowsInSection:(NSInteger)section
+{
+    if (section == 0) {
+        return 1;
+    } else if (section == 1) {
+        return 5;
+    } else if (section == 2){
+        return 1;
+    }else {
+        NSAssert(section > 1, @"Unexpected number of sections!");
+        return -1;
     }
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell * cell = nil;
-	
-	switch (indexPath.row) {
-		case BioRowIndex:
-			cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault
-										   reuseIdentifier:nil];
-			cell.textLabel.text = NSLocalizedString(@"Hacker from the Rustbelt, living in Austin, TX. iOS Developer at @gowalla, and co-founder of @austinrb", nil);
-			cell.textLabel.font = [UIFont systemFontOfSize:14];
-            cell.textLabel.numberOfLines = 0;
-			cell.selectionStyle = UITableViewCellSelectionStyleNone;
-			break;
-		case LocationRowIndex:
-			cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue2
-										   reuseIdentifier:nil];
-			cell.textLabel.text = NSLocalizedString(@"location", nil);
-			cell.detailTextLabel.text = NSLocalizedString(@"Austin, TX", nil);
-			cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-			break;
-		case WebsiteRowIndex:
-			cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue2
-										   reuseIdentifier:nil];
-			cell.textLabel.text = @"web";
-			cell.detailTextLabel.text = @"http://mattt.me";
-			cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-			break;
-	}
-	
-	return cell;
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if( indexPath.section == 0)
+    {
+        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"mainInfo"];
+    
+        UILabel *nameLabel = (UILabel *)[cell viewWithTag:2];
+        nameLabel.text = @"乔布斯";
+        UILabel *gameLabel = (UILabel *)[cell viewWithTag:3];
+        gameLabel.text = @"@jobs";
+    
+        UIImageView * ratingImageView = [(UIImageView *) [cell viewWithTag:1] initWithFrame:CGRectMake(10.0, 10.0, 64.0, 64.0)];
+        CALayer *lay  = ratingImageView.layer;
+        [lay setMasksToBounds:YES];
+        [lay setCornerRadius:30.0];
+        ratingImageView.image = [UIImage imageNamed:@"demo-avatar-jobs"];
+        return cell;
+    }
+    if ( indexPath.section == 1)
+    {
+        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"otherInfo"];
+        cell.textLabel.text = @"company";
+        cell.detailTextLabel.text= @"apple inc";
+        return cell;
+    }
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"mineFunction"];
+    cell.textLabel.text = @"我的收藏";
+    return cell;
 }
 
-#pragma mark - UITableViewDelegate
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-	[tableView deselectRowAtIndexPath:indexPath animated:YES];
+#pragma mark - tableView delegate
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.section == 0) {
+        return 90.0;
+    }
+    return 50;
+}
+
+
 
 @end
