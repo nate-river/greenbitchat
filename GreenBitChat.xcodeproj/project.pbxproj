@@ -213,6 +213,7 @@
 		0BEB65471820F9C800A8578C /* libidn.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BEB65441820F9C800A8578C /* libidn.a */; };
 		0BFE4FE21826805700F66F7E /* defaultPerson.png in Resources */ = {isa = PBXBuildFile; fileRef = 0BFE4FE11826805700F66F7E /* defaultPerson.png */; };
 		0BFED5F3182B4695006A31E8 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BFED5F2182B4695006A31E8 /* QuartzCore.framework */; };
+		0BFED5F6182B9461006A31E8 /* GBCDynamicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BFED5F5182B9461006A31E8 /* GBCDynamicViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -586,6 +587,8 @@
 		0BEB65491820FBAB00A8578C /* XMPPFramework.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMPPFramework.h; sourceTree = "<group>"; };
 		0BFE4FE11826805700F66F7E /* defaultPerson.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = defaultPerson.png; sourceTree = "<group>"; };
 		0BFED5F2182B4695006A31E8 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		0BFED5F4182B9461006A31E8 /* GBCDynamicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GBCDynamicViewController.h; sourceTree = "<group>"; };
+		0BFED5F5182B9461006A31E8 /* GBCDynamicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GBCDynamicViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1277,6 +1280,8 @@
 				0B1738981813C37A00616295 /* GBCSettingViewController.h */,
 				0B1738991813C37A00616295 /* GBCSettingViewController.m */,
 				0B3964DE180E6A9200AEA17A /* Supporting Files */,
+				0BFED5F4182B9461006A31E8 /* GBCDynamicViewController.h */,
+				0BFED5F5182B9461006A31E8 /* GBCDynamicViewController.m */,
 			);
 			path = GreenBitChat;
 			sourceTree = "<group>";
@@ -1810,6 +1815,7 @@
 				0B915EFF1820F2FD00A709BF /* DDLog.m in Sources */,
 				0B915F141820F34C00A709BF /* DDXMLNode.m in Sources */,
 				0B33E7621822428500743AD3 /* XMPPCapabilitiesCoreDataStorage.m in Sources */,
+				0BFED5F6182B9461006A31E8 /* GBCDynamicViewController.m in Sources */,
 				0B1738E41814339E00616295 /* JSMessageInputView.m in Sources */,
 				0B33E7451822428500743AD3 /* XMPPMUC.m in Sources */,
 				0BEB653A1820F99500A8578C /* XMPPStream.m in Sources */,

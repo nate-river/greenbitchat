@@ -164,7 +164,7 @@ static const int ddLogLevel = LOG_LEVEL_INFO;
 	// But you do need to provide the roster with some storage facility.
 	
 	xmppRosterStorage = [[XMPPRosterCoreDataStorage alloc] init];
-    //xmppRosterStorage = [[XMPPRosterCoreDataStorage alloc] initWithInMemoryStore];
+    xmppRosterStorage = [[XMPPRosterCoreDataStorage alloc] initWithInMemoryStore];
 	
 	xmppRoster = [[XMPPRoster alloc] initWithRosterStorage:xmppRosterStorage];
 	
@@ -314,7 +314,7 @@ static const int ddLogLevel = LOG_LEVEL_INFO;
 	// If you don't want to use the Settings view to set the JID,
 	// uncomment the section below to hard code a JID and password.
 	//
-	 NSString *myJID = @"25@42.96.198.13";
+	 NSString *myJID = @"1@42.96.198.13";
 	 NSString *myPassword = @"123456";
 	
 	if (myJID == nil || myPassword == nil) {

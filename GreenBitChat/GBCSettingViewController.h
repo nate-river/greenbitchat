@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <QuartzCore/QuartzCore.h>
-#import "JSMessagesViewController.h"
+#import <CoreData/CoreData.h>
 
 @interface GBCSettingViewController : UITableViewController
 @end

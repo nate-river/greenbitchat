@@ -7,7 +7,11 @@
 //
 
 #import "GBCSettingViewController.h"
+#import "GBCXMPPManager.h"
 
+#import "XMPPFramework.h"
+#import "GBCChatWindowViewController.h"
+#import "DDLog.h"
 
 @interface GBCSettingViewController ()
 
@@ -20,6 +24,14 @@
 {
     [super viewDidLoad];
     
+    //GBCXMPPManager *xmpp = [GBCXMPPManager sharedManager];
+    //XMPPvCardTemp *vCard = [[xmpp xmppvCardTempModule] myvCardTemp];
+    //vCard.nickname;
+//    XMPPIQ *iq = [XMPPIQ iqWithType:@"get"];
+//    [iq addAttributeWithName:@"to" stringValue:@"25@42.96.198.13"/*好友的jid*/];
+//    NSXMLElement *vElement = [NSXMLElement elementWithName:@"vCard" xmlns:@"vcard-temp"];
+//    [iq addChild:vElement];
+//    [[xmpp xmppStream ]sendElement:iq];
 	// Do any additional setup after loading the view.
 }
 
@@ -40,7 +52,7 @@
     if (section == 0) {
         return 1;
     } else if (section == 1) {
-        return 5;
+        return 4;
     } else if (section == 2){
         return 1;
     }else {
@@ -70,8 +82,27 @@
     if ( indexPath.section == 1)
     {
         UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"otherInfo"];
-        cell.textLabel.text = @"company";
-        cell.detailTextLabel.text= @"apple inc";
+
+        switch (indexPath.row)
+        {
+            case 0:
+                cell.textLabel.text = @"公司";
+                cell.detailTextLabel.text= @"apple inc";
+                break;
+            case 1:
+                cell.textLabel.text = @"领域";
+                cell.detailTextLabel.text= @"设计师";
+                break;
+            case 2:
+                cell.textLabel.text = @"专长";
+                cell.detailTextLabel.text= @"营销";
+                break;
+            case 3:
+                cell.textLabel.text = @"需求";
+                cell.detailTextLabel.text= @"苹果";
+                break;
+        }
+        
         return cell;
     }
     

@@ -163,8 +163,11 @@ static const int ddLogLevel = LOG_LEVEL_INFO;
     //[v vCardTempForJID:user.jidStr];
     
     //if (photoData != nil)
-     //   cell.imageView.image = [UIImage imageWithData:photoData];
+    //   cell.imageView.image = [UIImage imageWithData:photoData];
     //else
+    //NSData *photoData = [[[self appDelegate] xmppvCardAvatarModule] photoDataForJID:user.jid];
+    // XMPPvCardTemp *vCard =
+    
     cell.imageView.image = [UIImage imageNamed:@"defaultPerson"];
     
 	//[self configurePhotoForCell:cell user:user];

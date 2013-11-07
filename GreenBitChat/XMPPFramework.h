@@ -34,6 +34,7 @@
 #import "XMPPMessageArchiving.h"
 #import "XMPPMessageArchivingCoreDataStorage.h"
 
+#import "XMPPvCardTemp.h"
 #import "XMPPvCardTempModule.h"
 #import "XMPPvCardAvatarModule.h"
 #import "XMPPvCardCoreDataStorage.h"

@@ -8,6 +8,5 @@
 
 #import <UIKit/UIKit.h>
 
-@interface GBCDiscoverViewController : UIViewController
-<UITableViewDataSource,UITableViewDelegate>
+@interface GBCDiscoverViewController : UITableViewController
 @end

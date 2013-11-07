@@ -134,7 +134,6 @@ static const int ddLogLevel = LOG_LEVEL_INFO;
     } else
     {
         XMPPMessageArchiving_Contact_CoreDataObject *user = [[self fetchedResultsController] objectAtIndexPath:indexPath];
-        
         label = (UILabel *)[cell viewWithTag:1];
         label.text = user.bareJidStr;
         
