@@ -27,12 +27,8 @@ static const int ddLogLevel = LOG_LEVEL_INFO;
 @implementation GBCMessageViewController
 
 {
-    NSArray *recipes;
     NSArray *searchResults;
-    NSArray *contacs;
 }
-
-@synthesize tableView = _tableView;
 
 - (void)viewDidLoad
 {
@@ -136,9 +132,11 @@ static const int ddLogLevel = LOG_LEVEL_INFO;
         XMPPMessageArchiving_Contact_CoreDataObject *user = [[self fetchedResultsController] objectAtIndexPath:indexPath];
         label = (UILabel *)[cell viewWithTag:1];
         label.text = user.bareJidStr;
+        //label.text = @"王芳";
         
         label = (UILabel *)[cell viewWithTag:2];
         label.text = user.mostRecentMessageBody;
+        //label.text = @"测试长度很长的信息在这里是怎么展示的,测试长度很长的信息在这里是怎么展示的,测试长度很长的信息在这里是怎么展示的";
         //label.lineBreakMode = UILineBreakModeWordWrap;
         label.numberOfLines = 2;
         
@@ -161,7 +159,7 @@ static const int ddLogLevel = LOG_LEVEL_INFO;
 #pragma mark - UITableViewDelegate
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 70.0;
+    return 75.0;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
@@ -226,17 +224,17 @@ static const int ddLogLevel = LOG_LEVEL_INFO;
 
 }
 
-- (void)filterContentForSearchText:(NSString*)searchText scope:(NSString*)scope
-{
-    NSPredicate *resultPredicate = [NSPredicate
-                                    predicateWithFormat:@"SELF contains[cd] %@",searchText];
-    searchResults = [recipes filteredArrayUsingPredicate:resultPredicate];
-}
+//- (void)filterContentForSearchText:(NSString*)searchText scope:(NSString*)scope
+//{
+//    NSPredicate *resultPredicate = [NSPredicate
+//                                    predicateWithFormat:@"SELF contains[cd] %@",searchText];
+//    searchResults = [recipes filteredArrayUsingPredicate:resultPredicate];
+//}
 
--(BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchString:(NSString *)searchString
-{
-    [self filterContentForSearchText:searchString scope:[[self.searchDisplayController.searchBar scopeButtonTitles] objectAtIndex:[self.searchDisplayController.searchBar selectedScopeButtonIndex]]];
-    return YES;
-}
+//-(BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchString:(NSString *)searchString
+//{
+//    [self filterContentForSearchText:searchString scope:[[self.searchDisplayController.searchBar scopeButtonTitles] objectAtIndex:[self.searchDisplayController.searchBar selectedScopeButtonIndex]]];
+//    return YES;
+//}
 
 @end

@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		0B17388D1810D8FC00616295 /* GBCChatWindowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B17388C1810D8FC00616295 /* GBCChatWindowViewController.m */; };
-		0B17388F181135F600616295 /* Top100FamousPersons.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0B17388E181135F600616295 /* Top100FamousPersons.plist */; };
 		0B1738971813BFFF00616295 /* GBCDiscoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B1738961813BFFF00616295 /* GBCDiscoverViewController.m */; };
 		0B17389A1813C37A00616295 /* GBCSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B1738991813C37A00616295 /* GBCSettingViewController.m */; };
 		0B1738E11814339E00616295 /* JSBubbleMessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B17389D1814339E00616295 /* JSBubbleMessageCell.m */; };
@@ -229,7 +228,6 @@
 /* Begin PBXFileReference section */
 		0B17388B1810D8FC00616295 /* GBCChatWindowViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GBCChatWindowViewController.h; sourceTree = "<group>"; };
 		0B17388C1810D8FC00616295 /* GBCChatWindowViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GBCChatWindowViewController.m; sourceTree = "<group>"; };
-		0B17388E181135F600616295 /* Top100FamousPersons.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Top100FamousPersons.plist; path = "../../../Downloads/TableViewSearchBar-master/TableViewSearchBar/Top100FamousPersons.plist"; sourceTree = "<group>"; };
 		0B1738951813BFFF00616295 /* GBCDiscoverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GBCDiscoverViewController.h; sourceTree = "<group>"; };
 		0B1738961813BFFF00616295 /* GBCDiscoverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GBCDiscoverViewController.m; sourceTree = "<group>"; };
 		0B1738981813C37A00616295 /* GBCSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GBCSettingViewController.h; sourceTree = "<group>"; };
@@ -1293,7 +1291,6 @@
 				0BFE4FE11826805700F66F7E /* defaultPerson.png */,
 				0B1739181814D32700616295 /* demo-avatar-jobs.png */,
 				0B1739191814D32700616295 /* demo-avatar-woz.png */,
-				0B17388E181135F600616295 /* Top100FamousPersons.plist */,
 				0B3964DF180E6A9200AEA17A /* GreenBitChat-Info.plist */,
 				0B3964E0180E6A9200AEA17A /* InfoPlist.strings */,
 				0B3964E3180E6A9200AEA17A /* main.m */,
@@ -1641,7 +1638,6 @@
 				0B1738FD1814339E00616295 /* bubble-flat-outgoing@2x.png in Resources */,
 				0B1738EB1814339E00616295 /* bubble-default-incoming-selected@2x.png in Resources */,
 				0B1738F31814339E00616295 /* bubble-default-outgoing@2x.png in Resources */,
-				0B17388F181135F600616295 /* Top100FamousPersons.plist in Resources */,
 				0B1739011814339E00616295 /* bubble-square-incoming@2x.png in Resources */,
 				0BEB65461820F9C800A8578C /* build-libidn.sh in Resources */,
 				0BFE4FE21826805700F66F7E /* defaultPerson.png in Resources */,

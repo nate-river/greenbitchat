@@ -168,7 +168,9 @@ static const int ddLogLevel = LOG_LEVEL_INFO;
     //NSData *photoData = [[[self appDelegate] xmppvCardAvatarModule] photoDataForJID:user.jid];
     // XMPPvCardTemp *vCard =
     
-    cell.imageView.image = [UIImage imageNamed:@"defaultPerson"];
+    //cell.imageView.image = [UIImage imageNamed:@"demo-avatar-jobs"];
+    
+    
     
 	//[self configurePhotoForCell:cell user:user];
 	
@@ -264,6 +266,12 @@ static const int ddLogLevel = LOG_LEVEL_INFO;
     }
     
 }
+
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 60.0;
+}
+
 
 @end
 

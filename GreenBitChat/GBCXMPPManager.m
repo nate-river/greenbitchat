@@ -314,7 +314,7 @@ static const int ddLogLevel = LOG_LEVEL_INFO;
 	// If you don't want to use the Settings view to set the JID,
 	// uncomment the section below to hard code a JID and password.
 	//
-	 NSString *myJID = @"1@42.96.198.13";
+	 NSString *myJID = @"25@42.96.198.13";
 	 NSString *myPassword = @"123456";
 	
 	if (myJID == nil || myPassword == nil) {
@@ -497,7 +497,7 @@ static const int ddLogLevel = LOG_LEVEL_INFO;
 		                                               managedObjectContext:[self managedObjectContext_roster]];
 		
 		NSString *body = [[message elementForName:@"body"] stringValue];
-		//NSString *displayName = [user displayName];
+		NSString *displayName = [user displayName];
         
         //NSDictionary *info = [NSDictionary dictionaryWithObject:user forKey:@"user"];
         
@@ -505,30 +505,24 @@ static const int ddLogLevel = LOG_LEVEL_INFO;
         NSArray *k = [NSArray arrayWithObjects:@"user",@"message",nil];
         
         NSDictionary *info = [NSDictionary dictionaryWithObjects:u forKeys:k];
-        NSNotificationCenter *nc = [NSNotificationCenter defaultCenter];
-        //NSLog(@"Sending notification");
-        //发送notificaton
-        [nc postNotificationName:@"GBCsendMessage" object:self userInfo:info];
-
         
-//		if ([[UIApplication sharedApplication] applicationState] == UIApplicationStateActive)
-//		{
-//			UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:displayName
-//                                                                message:body
-//                                                               delegate:nil
-//                                                      cancelButtonTitle:@"Ok"
-//                                                      otherButtonTitles:nil];
-//			[alertView show];
-//		}
-//		else
-//		{
-//			// We are not active, so use a local notification instead
-//			UILocalNotification *localNotification = [[UILocalNotification alloc] init];
-//			localNotification.alertAction = @"Ok";
-//			localNotification.alertBody = [NSString stringWithFormat:@"From: %@\n\n%@",displayName,body];
-//            
-//			[[UIApplication sharedApplication] presentLocalNotificationNow:localNotification];
-//		}
+        
+		if ([[UIApplication sharedApplication] applicationState] == UIApplicationStateActive)
+		{
+			NSNotificationCenter *nc = [NSNotificationCenter defaultCenter];
+            //NSLog(@"Sending notification");
+            //发送notificaton
+            [nc postNotificationName:@"GBCsendMessage" object:self userInfo:info];
+		}
+		else
+		{
+			// We are not active, so use a local notification instead
+			UILocalNotification *localNotification = [[UILocalNotification alloc] init];
+			localNotification.alertAction = @"Ok";
+			localNotification.alertBody = [NSString stringWithFormat:@"From: %@\n\n%@",displayName,body];
+            
+			[[UIApplication sharedApplication] presentLocalNotificationNow:localNotification];
+		}
 	}
 }
 
