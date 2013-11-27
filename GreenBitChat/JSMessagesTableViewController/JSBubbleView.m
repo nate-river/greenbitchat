@@ -193,15 +193,15 @@ CGFloat const kJSAvatarSize = 50.0f;
             [self.text drawInRect:textFrame
                    withAttributes:attributes];
         }
-        else
-        {
-            CGContextSetFillColorWithColor(UIGraphicsGetCurrentContext(), textColor.CGColor);
-            [self.text drawInRect:textFrame
-                         withFont:[JSBubbleView font]
-                    lineBreakMode:NSLineBreakByWordWrapping
-                        alignment:NSTextAlignmentLeft];
-            CGContextSetFillColorWithColor(UIGraphicsGetCurrentContext(), [UIColor blackColor].CGColor);
-        }
+//        else
+//        {
+//            CGContextSetFillColorWithColor(UIGraphicsGetCurrentContext(), textColor.CGColor);
+//            [self.text drawInRect:textFrame
+//                         withFont:[JSBubbleView font]
+//                    lineBreakMode:NSLineBreakByWordWrapping
+//                        alignment:NSTextAlignmentLeft];
+//            CGContextSetFillColorWithColor(UIGraphicsGetCurrentContext(), [UIColor blackColor].CGColor);
+//        }
     }
     else
     {
@@ -217,13 +217,13 @@ CGFloat const kJSAvatarSize = 50.0f;
             [self.text drawInRect:textFrame
                    withAttributes:attributes];
         }
-        else
-        {
-            [self.text drawInRect:textFrame
-                         withFont:[JSBubbleView font]
-                    lineBreakMode:NSLineBreakByWordWrapping
-                        alignment:NSTextAlignmentLeft];
-        }
+//        else
+//        {
+//            [self.text drawInRect:textFrame
+//                         withFont:[JSBubbleView font]
+//                    lineBreakMode:NSLineBreakByWordWrapping
+//                        alignment:NSTextAlignmentLeft];
+//        }
     }
 }
 
@@ -296,6 +296,7 @@ CGFloat const kJSAvatarSize = 50.0f;
     return [txt sizeWithFont:[JSBubbleView font]
            constrainedToSize:CGSizeMake(width - kJSAvatarSize, height + kJSAvatarSize)
                lineBreakMode:NSLineBreakByWordWrapping];
+    
 }
 
 + (CGSize)bubbleSizeForText:(NSString *)txt

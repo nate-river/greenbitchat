@@ -17,11 +17,9 @@
 @property (nonatomic, strong) NSString *bareJidStr;
 @property (nonatomic, strong) NSString *displayName;
 
-
 @property (strong, nonatomic) NSMutableArray *messages;
 @property (strong, nonatomic) NSMutableArray *timestamps;
 
 - (void)handleMessageIncome:(XMPPMessage *)aMessage;
-
 
 @end

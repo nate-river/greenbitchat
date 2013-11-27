@@ -11,13 +11,11 @@
 #import "XMPPRosterCoreDataStorage.h"
 
 
-
 @interface GBCChatWindowViewController ()
 
 @end
 
 @implementation GBCChatWindowViewController
-
 
 
 - (UIButton *)sendButton
@@ -44,16 +42,6 @@
     self.delegate = self;
     self.dataSource = self;
     self.title = [self displayName];
-
-    
-//    self.messages = [[NSMutableArray alloc] initWithObjects:
-//                     @"you_我已经添加你为好友，我们聊天吧",
-//                     nil];
-//    self.messages = self.messages;
-//    
-//    self.timestamps = [[NSMutableArray alloc] initWithObjects:
-//                       [NSDate date],
-//                       nil];
 }
 
 - (void)didReceiveMemoryWarning
@@ -82,9 +70,7 @@
     
     [self.timestamps addObject:[NSDate date]];
     
-    
     NSString *message = text;
-    
     
     if (message.length > 0) {
         
@@ -177,9 +163,5 @@
 {
     return [UIImage imageNamed:@"demo-avatar-jobs"];
 }
-
-
-
-
 
 @end

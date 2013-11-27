@@ -9,6 +9,7 @@
 #import "GBCDiscoverViewController.h"
 //#import "GBCDynamicViewController.h";
 #import "GBCDongTaiViewController.h"
+#import "GBCFindPeopleViewController.h"
 
 @interface GBCDiscoverViewController ()
 
@@ -28,10 +29,16 @@
     {
         GBCDongTaiViewController  *destViewController = segue.destinationViewController;
         //GBCDynamicViewController *destViewController = segue.destinationViewController;
-        
         destViewController.hidesBottomBarWhenPushed = YES;
     }
     
+    if ([segue.identifier isEqualToString:@"showPeople"])
+    {
+        GBCFindPeopleViewController  *destViewController = segue.destinationViewController;
+        //GBCDynamicViewController *destViewController = segue.destinationViewController;
+        destViewController.hidesBottomBarWhenPushed = YES;
+
+    }
 }
 
 

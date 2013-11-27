@@ -8,10 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <CoreData/CoreData.h>
-
 #import "XMPPFramework.h"
-
-
 
 @interface GBCXMPPManager : NSObject <UIApplicationDelegate, XMPPRosterDelegate>
 {
@@ -37,7 +34,6 @@
 	BOOL allowSSLHostNameMismatch;
 	
 	BOOL isXmppConnected;
-	
 }
 
 @property (nonatomic, strong, readonly) XMPPStream *xmppStream;
@@ -66,7 +62,6 @@
 - (NSMutableArray *) fetchMessages;
 
 + (GBCXMPPManager *)sharedManager;
-
 
 @end
 

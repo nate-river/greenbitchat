@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface GBCFindPeopleViewController : UIViewController
+@interface GBCFindPeopleViewController : UIViewController <UITableViewDelegate,UITableViewDataSource>
 
 @end

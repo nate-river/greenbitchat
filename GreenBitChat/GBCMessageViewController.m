@@ -8,11 +8,9 @@
 
 #import "GBCMessageViewController.h"
 #import "GBCChatWindowViewController.h"
-
 #import "GBCXMPPManager.h"
 #import "XMPPFramework.h"
 #import "DDLog.h"
-
 
 #if DEBUG
 static const int ddLogLevel = LOG_LEVEL_VERBOSE;
@@ -23,7 +21,6 @@ static const int ddLogLevel = LOG_LEVEL_INFO;
 @interface GBCMessageViewController ()
 @end
 
-
 @implementation GBCMessageViewController
 
 {
@@ -32,9 +29,7 @@ static const int ddLogLevel = LOG_LEVEL_INFO;
 
 - (void)viewDidLoad
 {
-    
     [super viewDidLoad];
-
 }
 
 
@@ -42,7 +37,6 @@ static const int ddLogLevel = LOG_LEVEL_INFO;
 {
     [super didReceiveMemoryWarning];
 }
-
 
 #pragma mark - coredata
 - (NSFetchedResultsController *)fetchedResultsController
@@ -76,7 +70,7 @@ static const int ddLogLevel = LOG_LEVEL_INFO;
 		{
 			DDLogError(@"Error performing fetch: %@", error);
 		}
-        
+    
 	}
 	
 	return fetchedResultsController;
@@ -87,9 +81,6 @@ static const int ddLogLevel = LOG_LEVEL_INFO;
 	[[self tableView] reloadData];
 }
 
-
-
-// =============================================================================
 #pragma mark - UITableViewDataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)sectionIndex
 {
@@ -100,7 +91,7 @@ static const int ddLogLevel = LOG_LEVEL_INFO;
 //    {
 //        return [recipes count];
 //    }
-    //return [contacs count];
+//    return [contacs count];
     NSArray *sections = [[self fetchedResultsController] sections];
 	
 	if (sectionIndex < [sections count])
@@ -132,28 +123,22 @@ static const int ddLogLevel = LOG_LEVEL_INFO;
         XMPPMessageArchiving_Contact_CoreDataObject *user = [[self fetchedResultsController] objectAtIndexPath:indexPath];
         label = (UILabel *)[cell viewWithTag:1];
         label.text = user.bareJidStr;
-        //label.text = @"王芳";
         
         label = (UILabel *)[cell viewWithTag:2];
         label.text = user.mostRecentMessageBody;
-        //label.text = @"测试长度很长的信息在这里是怎么展示的,测试长度很长的信息在这里是怎么展示的,测试长度很长的信息在这里是怎么展示的";
-        //label.lineBreakMode = UILineBreakModeWordWrap;
         label.numberOfLines = 2;
         
         label = (UILabel *)[cell viewWithTag:3];
-        //label.text = user.mostRecentMessageTimestamp;
-        //cell.textLabel.text = [recipes objectAtIndex:indexPath.row];
+//        label.text = user.mostRecentMessageTimestamp;
     }
     return cell;
 }
-
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     
 	return [[[self fetchedResultsController] sections] count];
 
 }
-
 
 // =============================================================================
 #pragma mark - UITableViewDelegate
@@ -176,7 +161,8 @@ static const int ddLogLevel = LOG_LEVEL_INFO;
 {
     
 }
-        
+
+
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     if ([segue.identifier isEqualToString:@"showChatWindow"])

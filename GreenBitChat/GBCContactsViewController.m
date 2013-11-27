@@ -24,16 +24,10 @@ static const int ddLogLevel = LOG_LEVEL_INFO;
     
 }
 
-
-
 @property(nonatomic, strong) UISearchDisplayController *strongSearchDisplayController;
 @end
 
-
 @implementation GBCContactsViewController
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-#pragma mark UITableViewCell helpers
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 - (void)viewDidLoad
 {
@@ -41,19 +35,17 @@ static const int ddLogLevel = LOG_LEVEL_INFO;
     self.searchBar.placeholder = @"Search";
     [self.searchBar sizeToFit];
     
-    //[[GBCXMPPManager sharedManager] testMessageArchiving];
-    
-    /*
-     Default behavior:
-     The search bar scrolls along with the table view.
-     */
-    
     self.tableView.tableHeaderView = self.searchBar;
-    
     // The search bar is hidden when the view becomes visible the first time
     self.tableView.contentOffset = CGPointMake(0, CGRectGetHeight(self.searchBar.bounds));
-
 }
+
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+}
+
+# pragma mark CoreData
 
 - (NSFetchedResultsController *)fetchedResultsController
 {
@@ -99,11 +91,7 @@ static const int ddLogLevel = LOG_LEVEL_INFO;
 	[[self tableView] reloadData];
 }
 
-
-
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 #pragma mark UITableView
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
@@ -166,17 +154,13 @@ static const int ddLogLevel = LOG_LEVEL_INFO;
     //   cell.imageView.image = [UIImage imageWithData:photoData];
     //else
     //NSData *photoData = [[[self appDelegate] xmppvCardAvatarModule] photoDataForJID:user.jid];
-    // XMPPvCardTemp *vCard =
     
-    //cell.imageView.image = [UIImage imageNamed:@"demo-avatar-jobs"];
-    
-    
+    //cell.imageView.image = [UIImage imageNamed:@"demo-avatar-jobs"]；
     
 	//[self configurePhotoForCell:cell user:user];
 	
 	return cell;
 }
-
 
 - (NSArray *)sectionIndexTitlesForTableView:(UITableView *)tableView
 {
@@ -187,30 +171,8 @@ static const int ddLogLevel = LOG_LEVEL_INFO;
     }
 }
 
+#pragma mark - UITableViewDelegate
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-}
-
-//#pragma mark - Search Delegate
-//
-//- (void)searchDisplayControllerWillBeginSearch:(UISearchDisplayController *)controller
-//{
-//    self.filteredPersons = self.famousPersons;
-//}
-//
-//- (void)searchDisplayControllerDidEndSearch:(UISearchDisplayController *)controller
-//{
-//    self.filteredPersons = nil;
-//}
-//
-//- (BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchString:(NSString *)searchString
-//{
-//    self.filteredPersons = [self.filteredPersons filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"SELF contains[cd] %@", searchString]];
-//    
-//    return YES;
-//}
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
@@ -219,14 +181,17 @@ static const int ddLogLevel = LOG_LEVEL_INFO;
 //    {
 //        [self performSegueWithIdentifier: @"showChatWindow" sender: self ];
 //    }
-    //[self performSegueWithIdentifier: @"chat" sender: self ];
+//    [self performSegueWithIdentifier: @"chat" sender: self ];
 
-    
 }
 
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 60.0;
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
@@ -267,12 +232,24 @@ static const int ddLogLevel = LOG_LEVEL_INFO;
     
 }
 
-
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 60.0;
-}
-
-
+//#pragma mark - Search Delegate
+//
+//- (void)searchDisplayControllerWillBeginSearch:(UISearchDisplayController *)controller
+//{
+//    self.filteredPersons = self.famousPersons;
+//}
+//
+//- (void)searchDisplayControllerDidEndSearch:(UISearchDisplayController *)controller
+//{
+//    self.filteredPersons = nil;
+//}
+//
+//- (BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchString:(NSString *)searchString
+//{
+//    self.filteredPersons = [self.filteredPersons filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"SELF contains[cd] %@", searchString]];
+//
+//    return YES;
+//}
 @end
 
 

@@ -172,7 +172,6 @@ static const int ddLogLevel = LOG_LEVEL_INFO;
 	xmppRoster.autoAcceptKnownPresenceSubscriptionRequests = YES;
     
     // Setup messageArchiving
-    //xmppMessageArchivingStorage = [XMPPMessageArchivingCoreDataStorage sharedInstance];
     xmppMessageArchivingStorage = [XMPPMessageArchivingCoreDataStorage sharedInstance];
     xmppMessageArchiving = [[XMPPMessageArchiving alloc] initWithMessageArchivingStorage:xmppMessageArchivingStorage];
 
@@ -510,7 +509,6 @@ static const int ddLogLevel = LOG_LEVEL_INFO;
 		if ([[UIApplication sharedApplication] applicationState] == UIApplicationStateActive)
 		{
 			NSNotificationCenter *nc = [NSNotificationCenter defaultCenter];
-            //NSLog(@"Sending notification");
             //发送notificaton
             [nc postNotificationName:@"GBCsendMessage" object:self userInfo:info];
 		}

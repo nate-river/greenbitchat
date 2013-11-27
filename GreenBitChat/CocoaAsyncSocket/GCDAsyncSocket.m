@@ -6711,7 +6711,7 @@ static OSStatus SSLWriteFunction(SSLConnectionRef connection, const void *data, 
 	// So we'll just create a timer that will never fire - unless the server runs for decades.
 	[NSTimer scheduledTimerWithTimeInterval:[[NSDate distantFuture] timeIntervalSinceNow]
 	                                 target:self
-	                               selector:@selector(doNothingAtAll:)
+	                               selector:@selector(doNothingAtAll)
 	                               userInfo:nil
 	                                repeats:YES];
 	
@@ -6719,6 +6719,11 @@ static OSStatus SSLWriteFunction(SSLConnectionRef connection, const void *data, 
 	
 	LogInfo(@"CFStreamThread: Stopped");
 }}
+
++ (void) doNothingAtAll
+{
+    LogInfo(@"doNothingAtAll");
+}
 
 + (void)scheduleCFStreams:(GCDAsyncSocket *)asyncSocket
 {

@@ -7,11 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "MWPhotoBrowser.h"
-#import "MWPhoto.h"
 #import "FBGTimelineCell.h"
 #import "FBGTimelinePhotoView.h"
 
-@interface GBCDongTaiViewController : UITableViewController
+@interface GBCDongTaiViewController : UITableViewController <UIActionSheetDelegate>
+
+- (IBAction)shootAction:(UIBarButtonItem *)sender;
 
 @end

@@ -71,13 +71,13 @@
     return self;
 }
 
-- (void)dealloc
-{
-    [[NSNotificationCenter defaultCenter] removeObserver:self];
-    [self.dismissivePanGestureRecognizer removeTarget:self action:@selector(panning:)];
-    self.dismissivePanGestureRecognizer = nil;
-    self.keyboardDelegate = nil;
-}
+//- (void)dealloc
+//{
+//    [[NSNotificationCenter defaultCenter] removeObserver:self];
+//    [self.dismissivePanGestureRecognizer removeTarget:self action:@selector(panning:)];
+//    self.dismissivePanGestureRecognizer = nil;
+//    self.keyboardDelegate = nil;
+//}
 
 #pragma mark - Setters
 - (void)setDismissivePanGestureRecognizer:(UIPanGestureRecognizer *)pan

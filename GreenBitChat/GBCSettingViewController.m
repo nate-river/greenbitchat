@@ -23,16 +23,14 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    //GBCXMPPManager *xmpp = [GBCXMPPManager sharedManager];
-    //XMPPvCardTemp *vCard = [[xmpp xmppvCardTempModule] myvCardTemp];
-    //vCard.nickname;
+//    GBCXMPPManager *xmpp = [GBCXMPPManager sharedManager];
+//    XMPPvCardTemp *vCard = [[xmpp xmppvCardTempModule] myvCardTemp];
+//    vCard.nickname;
 //    XMPPIQ *iq = [XMPPIQ iqWithType:@"get"];
 //    [iq addAttributeWithName:@"to" stringValue:@"25@42.96.198.13"/*好友的jid*/];
 //    NSXMLElement *vElement = [NSXMLElement elementWithName:@"vCard" xmlns:@"vcard-temp"];
 //    [iq addChild:vElement];
 //    [[xmpp xmppStream ]sendElement:iq];
-	// Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning
@@ -40,6 +38,7 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
 #pragma mark - tableView dataSource
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
@@ -112,17 +111,18 @@
 }
 
 #pragma mark - tableView delegate
+
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
+
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.section == 0) {
         return 90.0;
     }
     return 50;
 }
-
 
 
 @end

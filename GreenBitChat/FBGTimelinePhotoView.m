@@ -48,8 +48,8 @@
     UIImageView *selfCloneImg = [[UIImageView alloc] initWithFrame:CGRectMake(imgX, positionYatModal, self.frame.size.width, self.frame.size.height)];
     selfCloneImg.image = self.image;
     
-    NSArray *tempContainer = [NSArray arrayWithObjects:self, selfCloneImg, nil];
-    [[self firstAvailableUIViewController] performSelector:@selector(browsePhoto:) withObject:tempContainer];
+    //NSArray *tempContainer = [NSArray arrayWithObjects:self, selfCloneImg, nil];
+    //[[self firstAvailableUIViewController] performSelector:@selector(browsePhoto:) withObject:tempContainer];
 }
 
 
