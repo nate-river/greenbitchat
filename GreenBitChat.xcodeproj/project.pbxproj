@@ -1267,27 +1267,9 @@
 		0B3964DD180E6A9200AEA17A /* GreenBitChat */ = {
 			isa = PBXGroup;
 			children = (
-				0B8841C018432D5E00EE1797 /* FB Gallery */,
-				0B915F751820F68E00A709BF /* Xmpp */,
-				0B17389B1814339E00616295 /* JSMessagesTableViewController */,
+				0B8D11311845EDAF003E86A2 /* View */,
 				0BE2819B184342C000B2F845 /* Model */,
-				0B3964EC180E6A9200AEA17A /* GBCMessageViewController.h */,
-				0B3964ED180E6A9200AEA17A /* GBCMessageViewController.m */,
-				0B3964EF180E6A9200AEA17A /* GBCContactsViewController.h */,
-				0B3964F0180E6A9200AEA17A /* GBCContactsViewController.m */,
-				0B88420D18433A8200EE1797 /* GBCFindPeopleViewController.h */,
-				0B88420E18433A8300EE1797 /* GBCFindPeopleViewController.m */,
-				0B17388B1810D8FC00616295 /* GBCChatWindowViewController.h */,
-				0B17388C1810D8FC00616295 /* GBCChatWindowViewController.m */,
-				0B8841B91843009400EE1797 /* GBCDongTaiViewController.h */,
-				0B8841BA1843009400EE1797 /* GBCDongTaiViewController.m */,
-				0B1738951813BFFF00616295 /* GBCDiscoverViewController.h */,
-				0B1738961813BFFF00616295 /* GBCDiscoverViewController.m */,
-				0B1738981813C37A00616295 /* GBCSettingViewController.h */,
-				0B1738991813C37A00616295 /* GBCSettingViewController.m */,
-				0BFED5F4182B9461006A31E8 /* GBCDynamicViewController.h */,
-				0BFED5F5182B9461006A31E8 /* GBCDynamicViewController.m */,
-				0B3964E9180E6A9200AEA17A /* Main.storyboard */,
+				0B8D11301845ED7D003E86A2 /* Controller */,
 				0B3964DE180E6A9200AEA17A /* Supporting Files */,
 			);
 			path = GreenBitChat;
@@ -1296,6 +1278,9 @@
 		0B3964DE180E6A9200AEA17A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				0B17389B1814339E00616295 /* JSMessagesTableViewController */,
+				0B915F751820F68E00A709BF /* Xmpp */,
+				0B8841C018432D5E00EE1797 /* FB Gallery */,
 				0B3964E6180E6A9200AEA17A /* GBCAppDelegate.h */,
 				0B3964E7180E6A9200AEA17A /* GBCAppDelegate.m */,
 				0B3964F2180E6A9200AEA17A /* Images.xcassets */,
@@ -1336,6 +1321,37 @@
 				0B8841F418432DC600EE1797 /* UIView+viewController.m */,
 			);
 			name = "FB Gallery";
+			sourceTree = "<group>";
+		};
+		0B8D11301845ED7D003E86A2 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				0B3964EF180E6A9200AEA17A /* GBCContactsViewController.h */,
+				0B3964F0180E6A9200AEA17A /* GBCContactsViewController.m */,
+				0B88420D18433A8200EE1797 /* GBCFindPeopleViewController.h */,
+				0B88420E18433A8300EE1797 /* GBCFindPeopleViewController.m */,
+				0B17388B1810D8FC00616295 /* GBCChatWindowViewController.h */,
+				0B17388C1810D8FC00616295 /* GBCChatWindowViewController.m */,
+				0B8841B91843009400EE1797 /* GBCDongTaiViewController.h */,
+				0B8841BA1843009400EE1797 /* GBCDongTaiViewController.m */,
+				0B1738951813BFFF00616295 /* GBCDiscoverViewController.h */,
+				0B1738961813BFFF00616295 /* GBCDiscoverViewController.m */,
+				0B1738981813C37A00616295 /* GBCSettingViewController.h */,
+				0B1738991813C37A00616295 /* GBCSettingViewController.m */,
+				0BFED5F4182B9461006A31E8 /* GBCDynamicViewController.h */,
+				0BFED5F5182B9461006A31E8 /* GBCDynamicViewController.m */,
+				0B3964ED180E6A9200AEA17A /* GBCMessageViewController.m */,
+				0B3964EC180E6A9200AEA17A /* GBCMessageViewController.h */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		0B8D11311845EDAF003E86A2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0B3964E9180E6A9200AEA17A /* Main.storyboard */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 		0B915EE71820F2D000A709BF /* CocoaAsyncSocket */ = {
