@@ -21,6 +21,7 @@
     [super viewDidLoad];
     // 从 URL 中载入一个 html 页面
     NSURL *url = [NSURL URLWithString:@"http://localhost/Iphone/index"];
+    //just try........
     [self.myWebView loadRequest:[NSURLRequest requestWithURL:url]];
 	// Do any additional setup after loading the view.
 }
