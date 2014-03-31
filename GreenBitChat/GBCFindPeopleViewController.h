@@ -10,4 +10,6 @@
 
 @interface GBCFindPeopleViewController : UIViewController <UITableViewDelegate,UITableViewDataSource>
 
+- (IBAction)switchTable:(UISegmentedControl *)sender;
+
 @end

@@ -7,8 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <QuartzCore/QuartzCore.h>
-#import <CoreData/CoreData.h>
 
-@interface GBCSettingViewController : UITableViewController
+@interface GBCPersonalViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UIWebView *myWebView;
 @end

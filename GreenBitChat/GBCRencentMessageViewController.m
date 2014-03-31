@@ -6,7 +6,7 @@
 //  Copyright (c) 2013 L. All rights reserved.
 //
 
-#import "GBCMessageViewController.h"
+#import "GBCRencentMessageViewController.h"
 #import "GBCChatWindowViewController.h"
 #import "GBCXMPPManager.h"
 #import "XMPPFramework.h"
@@ -18,10 +18,10 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
 static const int ddLogLevel = LOG_LEVEL_INFO;
 #endif
 
-@interface GBCMessageViewController ()
+@interface GBCRencentMessageViewController ()
 @end
 
-@implementation GBCMessageViewController
+@implementation GBCRencentMessageViewController
 
 {
     NSArray *searchResults;

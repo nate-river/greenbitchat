@@ -8,5 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface GBCDiscoverViewController : UITableViewController
+@interface GBCHomeViewController : UIViewController
+
+@property (weak, nonatomic) IBOutlet UIWebView *myWebView;
+
 @end

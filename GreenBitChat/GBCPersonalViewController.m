@@ -1,29 +1,28 @@
 //
-//  GBCDynamicViewController.m
+//  GBCSettingViewController.m
 //  GreenBitChat
 //
-//  Created by L on 11/7/13.
+//  Created by L on 10/20/13.
 //  Copyright (c) 2013 L. All rights reserved.
 //
 
-#import "GBCDynamicViewController.h"
+#import "GBCPersonalViewController.h"
 
-@interface GBCDynamicViewController ()
+@interface GBCPersonalViewController ()
 
 @end
 
-@implementation GBCDynamicViewController
+@implementation GBCPersonalViewController
 
-@synthesize MyWebview;
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     // 从 URL 中载入一个 html 页面
-    NSURL *url = [NSURL URLWithString:@"http://www.google.com"];
-    [self.MyWebview loadRequest:[NSURLRequest requestWithURL:url]];
+    NSURL *url = [NSURL URLWithString:@"http://localhost/Iphone/index"];
+    [self.myWebView loadRequest:[NSURLRequest requestWithURL:url]];
 	// Do any additional setup after loading the view.
 }
-
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

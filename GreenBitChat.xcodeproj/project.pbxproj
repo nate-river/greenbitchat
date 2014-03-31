@@ -7,9 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B0672BB18E16F3500CC901B /* GBCLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B0672BA18E16F3500CC901B /* GBCLoginViewController.xib */; };
+		0B0672BE18E170CA00CC901B /* GBCLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B0672BD18E170CA00CC901B /* GBCLoginViewController.m */; };
 		0B17388D1810D8FC00616295 /* GBCChatWindowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B17388C1810D8FC00616295 /* GBCChatWindowViewController.m */; };
-		0B1738971813BFFF00616295 /* GBCDiscoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B1738961813BFFF00616295 /* GBCDiscoverViewController.m */; };
-		0B17389A1813C37A00616295 /* GBCSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B1738991813C37A00616295 /* GBCSettingViewController.m */; };
+		0B1738971813BFFF00616295 /* GBCHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B1738961813BFFF00616295 /* GBCHomeViewController.m */; };
+		0B17389A1813C37A00616295 /* GBCPersonalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B1738991813C37A00616295 /* GBCPersonalViewController.m */; };
 		0B1738E11814339E00616295 /* JSBubbleMessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B17389D1814339E00616295 /* JSBubbleMessageCell.m */; };
 		0B1738E21814339E00616295 /* JSBubbleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B17389F1814339E00616295 /* JSBubbleView.m */; };
 		0B1738E31814339E00616295 /* JSDismissiveTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B1738A11814339E00616295 /* JSDismissiveTextView.m */; };
@@ -65,6 +67,7 @@
 		0B1739151814339E00616295 /* UIColor+JSMessagesView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B1738DC1814339E00616295 /* UIColor+JSMessagesView.m */; };
 		0B1739161814339E00616295 /* UIImage+JSMessagesView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B1738DE1814339E00616295 /* UIImage+JSMessagesView.m */; };
 		0B1739171814339E00616295 /* UIView+AnimationOptionsForCurve.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B1738E01814339E00616295 /* UIView+AnimationOptionsForCurve.m */; };
+		0B22709718E43C8F006E4B05 /* libidn.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BEB65441820F9C800A8578C /* libidn.a */; };
 		0B33E646182241E600743AD3 /* GBCXMPPManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B33E645182241E600743AD3 /* GBCXMPPManager.m */; };
 		0B33E7241822428500743AD3 /* XMPPBandwidthMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B33E64A1822428500743AD3 /* XMPPBandwidthMonitor.m */; };
 		0B33E7251822428500743AD3 /* XMPPCoreDataStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B33E64D1822428500743AD3 /* XMPPCoreDataStorage.m */; };
@@ -159,7 +162,7 @@
 		0B3964E4180E6A9200AEA17A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B3964E3180E6A9200AEA17A /* main.m */; };
 		0B3964E8180E6A9200AEA17A /* GBCAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B3964E7180E6A9200AEA17A /* GBCAppDelegate.m */; };
 		0B3964EB180E6A9200AEA17A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B3964E9180E6A9200AEA17A /* Main.storyboard */; };
-		0B3964EE180E6A9200AEA17A /* GBCMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B3964ED180E6A9200AEA17A /* GBCMessageViewController.m */; };
+		0B3964EE180E6A9200AEA17A /* GBCRencentMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B3964ED180E6A9200AEA17A /* GBCRencentMessageViewController.m */; };
 		0B3964F1180E6A9200AEA17A /* GBCContactsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B3964F0180E6A9200AEA17A /* GBCContactsViewController.m */; };
 		0B3964F3180E6A9200AEA17A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B3964F2180E6A9200AEA17A /* Images.xcassets */; };
 		0B3964FA180E6A9200AEA17A /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B3964F9180E6A9200AEA17A /* XCTest.framework */; };
@@ -167,10 +170,6 @@
 		0B3964FC180E6A9200AEA17A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B3964DB180E6A9200AEA17A /* UIKit.framework */; };
 		0B396504180E6A9200AEA17A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0B396502180E6A9200AEA17A /* InfoPlist.strings */; };
 		0B396506180E6A9200AEA17A /* GreenBitChatTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B396505180E6A9200AEA17A /* GreenBitChatTests.m */; };
-		0B8841BB1843009400EE1797 /* GBCDongTaiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B8841BA1843009400EE1797 /* GBCDongTaiViewController.m */; };
-		0B8841F518432DC600EE1797 /* FBGTimelineCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B8841C218432DC600EE1797 /* FBGTimelineCell.m */; };
-		0B8841F618432DC600EE1797 /* FBGTimelinePhotoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B8841C418432DC600EE1797 /* FBGTimelinePhotoView.m */; };
-		0B88420918432DC600EE1797 /* UIView+viewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B8841F418432DC600EE1797 /* UIView+viewController.m */; };
 		0B88420F18433A8300EE1797 /* GBCFindPeopleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B88420E18433A8300EE1797 /* GBCFindPeopleViewController.m */; };
 		0B915EEA1820F2D000A709BF /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B915EE91820F2D000A709BF /* GCDAsyncSocket.m */; };
 		0B915EFC1820F2FD00A709BF /* DDAbstractDatabaseLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B915EED1820F2FD00A709BF /* DDAbstractDatabaseLogger.m */; };
@@ -211,9 +210,7 @@
 		0BEB653F1820F99500A8578C /* XMPPSRVResolver.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BEB65271820F99500A8578C /* XMPPSRVResolver.m */; };
 		0BEB65401820F99500A8578C /* XMPPStringPrep.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BEB65291820F99500A8578C /* XMPPStringPrep.m */; };
 		0BEB65461820F9C800A8578C /* build-libidn.sh in Resources */ = {isa = PBXBuildFile; fileRef = 0BEB65421820F9C800A8578C /* build-libidn.sh */; };
-		0BEB65471820F9C800A8578C /* libidn.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BEB65441820F9C800A8578C /* libidn.a */; };
 		0BFED5F3182B4695006A31E8 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BFED5F2182B4695006A31E8 /* QuartzCore.framework */; };
-		0BFED5F6182B9461006A31E8 /* GBCDynamicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BFED5F5182B9461006A31E8 /* GBCDynamicViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -227,12 +224,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0B0672BA18E16F3500CC901B /* GBCLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GBCLoginViewController.xib; sourceTree = "<group>"; };
+		0B0672BC18E170CA00CC901B /* GBCLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GBCLoginViewController.h; sourceTree = "<group>"; };
+		0B0672BD18E170CA00CC901B /* GBCLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GBCLoginViewController.m; sourceTree = "<group>"; };
 		0B17388B1810D8FC00616295 /* GBCChatWindowViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GBCChatWindowViewController.h; sourceTree = "<group>"; };
 		0B17388C1810D8FC00616295 /* GBCChatWindowViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GBCChatWindowViewController.m; sourceTree = "<group>"; };
-		0B1738951813BFFF00616295 /* GBCDiscoverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GBCDiscoverViewController.h; sourceTree = "<group>"; };
-		0B1738961813BFFF00616295 /* GBCDiscoverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GBCDiscoverViewController.m; sourceTree = "<group>"; };
-		0B1738981813C37A00616295 /* GBCSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GBCSettingViewController.h; sourceTree = "<group>"; };
-		0B1738991813C37A00616295 /* GBCSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GBCSettingViewController.m; sourceTree = "<group>"; };
+		0B1738951813BFFF00616295 /* GBCHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GBCHomeViewController.h; sourceTree = "<group>"; };
+		0B1738961813BFFF00616295 /* GBCHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GBCHomeViewController.m; sourceTree = "<group>"; };
+		0B1738981813C37A00616295 /* GBCPersonalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GBCPersonalViewController.h; sourceTree = "<group>"; };
+		0B1738991813C37A00616295 /* GBCPersonalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GBCPersonalViewController.m; sourceTree = "<group>"; };
 		0B17389C1814339E00616295 /* JSBubbleMessageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBubbleMessageCell.h; sourceTree = "<group>"; };
 		0B17389D1814339E00616295 /* JSBubbleMessageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSBubbleMessageCell.m; sourceTree = "<group>"; };
 		0B17389E1814339E00616295 /* JSBubbleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBubbleView.h; sourceTree = "<group>"; };
@@ -487,8 +487,8 @@
 		0B3964E6180E6A9200AEA17A /* GBCAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GBCAppDelegate.h; sourceTree = "<group>"; };
 		0B3964E7180E6A9200AEA17A /* GBCAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GBCAppDelegate.m; sourceTree = "<group>"; };
 		0B3964EA180E6A9200AEA17A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		0B3964EC180E6A9200AEA17A /* GBCMessageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GBCMessageViewController.h; sourceTree = "<group>"; };
-		0B3964ED180E6A9200AEA17A /* GBCMessageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GBCMessageViewController.m; sourceTree = "<group>"; };
+		0B3964EC180E6A9200AEA17A /* GBCRencentMessageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GBCRencentMessageViewController.h; sourceTree = "<group>"; };
+		0B3964ED180E6A9200AEA17A /* GBCRencentMessageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GBCRencentMessageViewController.m; sourceTree = "<group>"; };
 		0B3964EF180E6A9200AEA17A /* GBCContactsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GBCContactsViewController.h; sourceTree = "<group>"; };
 		0B3964F0180E6A9200AEA17A /* GBCContactsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GBCContactsViewController.m; sourceTree = "<group>"; };
 		0B3964F2180E6A9200AEA17A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -497,14 +497,6 @@
 		0B396501180E6A9200AEA17A /* GreenBitChatTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GreenBitChatTests-Info.plist"; sourceTree = "<group>"; };
 		0B396503180E6A9200AEA17A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		0B396505180E6A9200AEA17A /* GreenBitChatTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GreenBitChatTests.m; sourceTree = "<group>"; };
-		0B8841B91843009400EE1797 /* GBCDongTaiViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GBCDongTaiViewController.h; sourceTree = "<group>"; };
-		0B8841BA1843009400EE1797 /* GBCDongTaiViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GBCDongTaiViewController.m; sourceTree = "<group>"; };
-		0B8841C118432DC600EE1797 /* FBGTimelineCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBGTimelineCell.h; sourceTree = "<group>"; };
-		0B8841C218432DC600EE1797 /* FBGTimelineCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBGTimelineCell.m; sourceTree = "<group>"; };
-		0B8841C318432DC600EE1797 /* FBGTimelinePhotoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBGTimelinePhotoView.h; sourceTree = "<group>"; };
-		0B8841C418432DC600EE1797 /* FBGTimelinePhotoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBGTimelinePhotoView.m; sourceTree = "<group>"; };
-		0B8841F318432DC600EE1797 /* UIView+viewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+viewController.h"; sourceTree = "<group>"; };
-		0B8841F418432DC600EE1797 /* UIView+viewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+viewController.m"; sourceTree = "<group>"; };
 		0B88420D18433A8200EE1797 /* GBCFindPeopleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GBCFindPeopleViewController.h; sourceTree = "<group>"; };
 		0B88420E18433A8300EE1797 /* GBCFindPeopleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GBCFindPeopleViewController.m; sourceTree = "<group>"; };
 		0B915EE81820F2D000A709BF /* GCDAsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDAsyncSocket.h; sourceTree = "<group>"; };
@@ -592,8 +584,6 @@
 		0BEB65451820F9C800A8578C /* stringprep.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stringprep.h; sourceTree = "<group>"; };
 		0BEB65491820FBAB00A8578C /* XMPPFramework.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMPPFramework.h; sourceTree = "<group>"; };
 		0BFED5F2182B4695006A31E8 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		0BFED5F4182B9461006A31E8 /* GBCDynamicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GBCDynamicViewController.h; sourceTree = "<group>"; };
-		0BFED5F5182B9461006A31E8 /* GBCDynamicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GBCDynamicViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -601,11 +591,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B22709718E43C8F006E4B05 /* libidn.a in Frameworks */,
 				0BFED5F3182B4695006A31E8 /* QuartzCore.framework in Frameworks */,
 				0B915F211820F62000A709BF /* libresolv.dylib in Frameworks */,
 				0B915F161820F58000A709BF /* libxml2.dylib in Frameworks */,
 				0B3964DA180E6A9200AEA17A /* CoreGraphics.framework in Frameworks */,
-				0BEB65471820F9C800A8578C /* libidn.a in Frameworks */,
 				0B3964DC180E6A9200AEA17A /* UIKit.framework in Frameworks */,
 				0B3964D8180E6A9200AEA17A /* Foundation.framework in Frameworks */,
 			);
@@ -719,6 +709,62 @@
 				0B1738D81814339E00616295 /* messageSent.aiff */,
 			);
 			path = Sounds;
+			sourceTree = "<group>";
+		};
+		0B22709118E438C0006E4B05 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				0B0672BC18E170CA00CC901B /* GBCLoginViewController.h */,
+				0B0672BD18E170CA00CC901B /* GBCLoginViewController.m */,
+			);
+			name = Login;
+			sourceTree = "<group>";
+		};
+		0B22709218E438DC006E4B05 /* Regist */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Regist;
+			sourceTree = "<group>";
+		};
+		0B22709318E438ED006E4B05 /* RecentMessage */ = {
+			isa = PBXGroup;
+			children = (
+				0B3964EC180E6A9200AEA17A /* GBCRencentMessageViewController.h */,
+				0B3964ED180E6A9200AEA17A /* GBCRencentMessageViewController.m */,
+				0B17388B1810D8FC00616295 /* GBCChatWindowViewController.h */,
+				0B17388C1810D8FC00616295 /* GBCChatWindowViewController.m */,
+			);
+			name = RecentMessage;
+			sourceTree = "<group>";
+		};
+		0B22709418E4390D006E4B05 /* Contacts */ = {
+			isa = PBXGroup;
+			children = (
+				0B3964EF180E6A9200AEA17A /* GBCContactsViewController.h */,
+				0B3964F0180E6A9200AEA17A /* GBCContactsViewController.m */,
+				0B88420D18433A8200EE1797 /* GBCFindPeopleViewController.h */,
+				0B88420E18433A8300EE1797 /* GBCFindPeopleViewController.m */,
+			);
+			name = Contacts;
+			sourceTree = "<group>";
+		};
+		0B22709518E43932006E4B05 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				0B1738951813BFFF00616295 /* GBCHomeViewController.h */,
+				0B1738961813BFFF00616295 /* GBCHomeViewController.m */,
+			);
+			name = Home;
+			sourceTree = "<group>";
+		};
+		0B22709618E43978006E4B05 /* PersonalPage */ = {
+			isa = PBXGroup;
+			children = (
+				0B1738981813C37A00616295 /* GBCPersonalViewController.h */,
+				0B1738991813C37A00616295 /* GBCPersonalViewController.m */,
+			);
+			name = PersonalPage;
 			sourceTree = "<group>";
 		};
 		0B33E6471822428500743AD3 /* Extensions */ = {
@@ -1278,16 +1324,15 @@
 		0B3964DE180E6A9200AEA17A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				0B17389B1814339E00616295 /* JSMessagesTableViewController */,
-				0B915F751820F68E00A709BF /* Xmpp */,
-				0B8841C018432D5E00EE1797 /* FB Gallery */,
+				0B3964F2180E6A9200AEA17A /* Images.xcassets */,
+				0B3964E3180E6A9200AEA17A /* main.m */,
 				0B3964E6180E6A9200AEA17A /* GBCAppDelegate.h */,
 				0B3964E7180E6A9200AEA17A /* GBCAppDelegate.m */,
-				0B3964F2180E6A9200AEA17A /* Images.xcassets */,
-				0B3964DF180E6A9200AEA17A /* GreenBitChat-Info.plist */,
 				0B3964E0180E6A9200AEA17A /* InfoPlist.strings */,
-				0B3964E3180E6A9200AEA17A /* main.m */,
+				0B3964DF180E6A9200AEA17A /* GreenBitChat-Info.plist */,
 				0B3964E5180E6A9200AEA17A /* GreenBitChat-Prefix.pch */,
+				0B17389B1814339E00616295 /* JSMessagesTableViewController */,
+				0B915F751820F68E00A709BF /* Xmpp */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -1310,38 +1355,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		0B8841C018432D5E00EE1797 /* FB Gallery */ = {
-			isa = PBXGroup;
-			children = (
-				0B8841C118432DC600EE1797 /* FBGTimelineCell.h */,
-				0B8841C218432DC600EE1797 /* FBGTimelineCell.m */,
-				0B8841C318432DC600EE1797 /* FBGTimelinePhotoView.h */,
-				0B8841C418432DC600EE1797 /* FBGTimelinePhotoView.m */,
-				0B8841F318432DC600EE1797 /* UIView+viewController.h */,
-				0B8841F418432DC600EE1797 /* UIView+viewController.m */,
-			);
-			name = "FB Gallery";
-			sourceTree = "<group>";
-		};
 		0B8D11301845ED7D003E86A2 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				0B3964EF180E6A9200AEA17A /* GBCContactsViewController.h */,
-				0B3964F0180E6A9200AEA17A /* GBCContactsViewController.m */,
-				0B88420D18433A8200EE1797 /* GBCFindPeopleViewController.h */,
-				0B88420E18433A8300EE1797 /* GBCFindPeopleViewController.m */,
-				0B17388B1810D8FC00616295 /* GBCChatWindowViewController.h */,
-				0B17388C1810D8FC00616295 /* GBCChatWindowViewController.m */,
-				0B8841B91843009400EE1797 /* GBCDongTaiViewController.h */,
-				0B8841BA1843009400EE1797 /* GBCDongTaiViewController.m */,
-				0B1738951813BFFF00616295 /* GBCDiscoverViewController.h */,
-				0B1738961813BFFF00616295 /* GBCDiscoverViewController.m */,
-				0B1738981813C37A00616295 /* GBCSettingViewController.h */,
-				0B1738991813C37A00616295 /* GBCSettingViewController.m */,
-				0BFED5F4182B9461006A31E8 /* GBCDynamicViewController.h */,
-				0BFED5F5182B9461006A31E8 /* GBCDynamicViewController.m */,
-				0B3964ED180E6A9200AEA17A /* GBCMessageViewController.m */,
-				0B3964EC180E6A9200AEA17A /* GBCMessageViewController.h */,
+				0B22709618E43978006E4B05 /* PersonalPage */,
+				0B22709518E43932006E4B05 /* Home */,
+				0B22709418E4390D006E4B05 /* Contacts */,
+				0B22709318E438ED006E4B05 /* RecentMessage */,
+				0B22709218E438DC006E4B05 /* Regist */,
+				0B22709118E438C0006E4B05 /* Login */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -1350,6 +1372,7 @@
 			isa = PBXGroup;
 			children = (
 				0B3964E9180E6A9200AEA17A /* Main.storyboard */,
+				0B0672BA18E16F3500CC901B /* GBCLoginViewController.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -1454,8 +1477,8 @@
 		0BE2819B184342C000B2F845 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				0B33E645182241E600743AD3 /* GBCXMPPManager.m */,
 				0B33E644182241E600743AD3 /* GBCXMPPManager.h */,
+				0B33E645182241E600743AD3 /* GBCXMPPManager.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -1675,6 +1698,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0B1738E81814339E00616295 /* bubble-default-incoming-green.png in Resources */,
+				0B0672BB18E16F3500CC901B /* GBCLoginViewController.xib in Resources */,
 				0B915F031820F2FD00A709BF /* README.txt in Resources */,
 				0B1738F91814339E00616295 /* bubble-flat-outgoing-old@2x.png in Resources */,
 				0B1738F61814339E00616295 /* bubble-flat-incoming.png in Resources */,
@@ -1763,10 +1787,9 @@
 				0B915F111820F34C00A709BF /* NSString+DDXML.m in Sources */,
 				0B33E74D1822428500743AD3 /* XMPPvCardTempAdr.m in Sources */,
 				0B33E76C1822428500743AD3 /* XMPPMessage+XEP_0172.m in Sources */,
-				0B88420918432DC600EE1797 /* UIView+viewController.m in Sources */,
 				0B33E74C1822428500743AD3 /* XMPPvCardTemp.m in Sources */,
 				0B33E76B1822428500743AD3 /* XMPPvCardAvatarModule.m in Sources */,
-				0B17389A1813C37A00616295 /* GBCSettingViewController.m in Sources */,
+				0B17389A1813C37A00616295 /* GBCPersonalViewController.m in Sources */,
 				0BEB653B1820F99500A8578C /* DDList.m in Sources */,
 				0B33E7341822428500743AD3 /* XMPPIQ+JabberRPCResonse.m in Sources */,
 				0B33E73F1822428500743AD3 /* XMPPRoomMessageHybridCoreDataStorageObject.m in Sources */,
@@ -1789,7 +1812,7 @@
 				0B33E75E1822428500743AD3 /* XMPPSoftwareVersion.m in Sources */,
 				0B33E7541822428500743AD3 /* NSXMLElement+XEP_0059.m in Sources */,
 				0BEB65311820F99500A8578C /* NSNumber+XMPP.m in Sources */,
-				0B3964EE180E6A9200AEA17A /* GBCMessageViewController.m in Sources */,
+				0B3964EE180E6A9200AEA17A /* GBCRencentMessageViewController.m in Sources */,
 				0BEB65321820F99500A8578C /* NSXMLElement+XMPP.m in Sources */,
 				0B33E7411822428500743AD3 /* XMPPRoomMemoryStorage.m in Sources */,
 				0BEB65341820F99500A8578C /* XMPPIQ.m in Sources */,
@@ -1802,8 +1825,6 @@
 				0B33E72C1822428500743AD3 /* XMPPRosterCoreDataStorage.m in Sources */,
 				0BEB653E1820F99500A8578C /* XMPPIDTracker.m in Sources */,
 				0B1738E71814339E00616295 /* NSString+JSMessagesView.m in Sources */,
-				0B8841F518432DC600EE1797 /* FBGTimelineCell.m in Sources */,
-				0B8841F618432DC600EE1797 /* FBGTimelinePhotoView.m in Sources */,
 				0BEB652F1820F99500A8578C /* XMPPXFacebookPlatformAuthentication.m in Sources */,
 				0B33E7511822428500743AD3 /* XMPPvCardTempLabel.m in Sources */,
 				0B33E7631822428500743AD3 /* XMPPCapsCoreDataStorageObject.m in Sources */,
@@ -1837,7 +1858,6 @@
 				0B33E74E1822428500743AD3 /* XMPPvCardTempAdrTypes.m in Sources */,
 				0B33E7291822428500743AD3 /* XMPPGroupCoreDataStorageObject.m in Sources */,
 				0B33E7521822428500743AD3 /* XMPPvCardTempModule.m in Sources */,
-				0B8841BB1843009400EE1797 /* GBCDongTaiViewController.m in Sources */,
 				0B1739141814339E00616295 /* UIButton+JSMessagesView.m in Sources */,
 				0B33E7691822428500743AD3 /* XMPPMessageArchivingCoreDataStorage.m in Sources */,
 				0B3964E8180E6A9200AEA17A /* GBCAppDelegate.m in Sources */,
@@ -1857,7 +1877,6 @@
 				0B915EFF1820F2FD00A709BF /* DDLog.m in Sources */,
 				0B915F141820F34C00A709BF /* DDXMLNode.m in Sources */,
 				0B33E7621822428500743AD3 /* XMPPCapabilitiesCoreDataStorage.m in Sources */,
-				0BFED5F6182B9461006A31E8 /* GBCDynamicViewController.m in Sources */,
 				0B1738E41814339E00616295 /* JSMessageInputView.m in Sources */,
 				0B33E7451822428500743AD3 /* XMPPMUC.m in Sources */,
 				0BEB653A1820F99500A8578C /* XMPPStream.m in Sources */,
@@ -1870,12 +1889,13 @@
 				0B33E7381822428500743AD3 /* XMPPPrivacy.m in Sources */,
 				0B33E72A1822428500743AD3 /* XMPPResourceCoreDataStorageObject.m in Sources */,
 				0B33E7641822428500743AD3 /* XMPPCapsResourceCoreDataStorageObject.m in Sources */,
-				0B1738971813BFFF00616295 /* GBCDiscoverViewController.m in Sources */,
+				0B1738971813BFFF00616295 /* GBCHomeViewController.m in Sources */,
 				0B33E7721822428500743AD3 /* XMPPAutoTime.m in Sources */,
 				0B33E76F1822428500743AD3 /* XMPPMessageDeliveryReceipts.m in Sources */,
 				0B33E7761822428500743AD3 /* XMPPAttentionModule.m in Sources */,
 				0B33E7311822428500743AD3 /* XMPPRoster.m in Sources */,
 				0B33E7601822428500743AD3 /* NSString+XEP_0106.m in Sources */,
+				0B0672BE18E170CA00CC901B /* GBCLoginViewController.m in Sources */,
 				0B33E7241822428500743AD3 /* XMPPBandwidthMonitor.m in Sources */,
 				0B33E7681822428500743AD3 /* XMPPMessageArchiving_Message_CoreDataObject.m in Sources */,
 				0B1738E11814339E00616295 /* JSBubbleMessageCell.m in Sources */,
@@ -2025,10 +2045,10 @@
 				INFOPLIST_FILE = "GreenBitChat/GreenBitChat-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"/Users/L/Downloads/XMPPFramework-master/Vendor/libidn",
 					/Users/L/Documents/GreenBitChat/GreenBitChat/libidn,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -2048,10 +2068,10 @@
 				INFOPLIST_FILE = "GreenBitChat/GreenBitChat-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"/Users/L/Downloads/XMPPFramework-master/Vendor/libidn",
 					/Users/L/Documents/GreenBitChat/GreenBitChat/libidn,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
