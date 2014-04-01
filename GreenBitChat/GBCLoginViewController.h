@@ -8,7 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface GBCLoginViewController : UIViewController
-- (IBAction)loginButton:(UIButton *)sender;
+@interface GBCLoginViewController : UIViewController <UITextFieldDelegate>
+@property (weak, nonatomic) IBOutlet UITextField *accoutTextField;
+@property (weak, nonatomic) IBOutlet UITextField *passwordTextField;
 @end
  

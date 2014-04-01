@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface GBCRegistViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UITextField *phoneNumberTextField;
+@property (weak, nonatomic) IBOutlet UITextField *messageCodeTextField;
 
 @end

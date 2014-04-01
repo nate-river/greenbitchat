@@ -30,13 +30,6 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)loginButton:(UIButton *)sender {
-    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-    UITabBarController *obj=[storyboard instantiateViewControllerWithIdentifier:@"tab"];
-    self.navigationController.navigationBarHidden=YES;
-    [self.navigationController pushViewController:obj animated:YES];
-}
-
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
@@ -45,6 +38,38 @@
         GBCRegistViewController *destViewController = segue.destinationViewController;
         destViewController.hidesBottomBarWhenPushed = YES;
     }
+}
+
+- (BOOL)textFieldShouldBeginEditing:(UITextField *)textField
+{
+    return YES;
+}
+
+// It is important for you to hide kwyboard
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    if (textField == _accoutTextField) {
+        [textField resignFirstResponder];
+        [_passwordTextField becomeFirstResponder];
+    }else if ( textField == _passwordTextField){
+        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+        UITabBarController *obj=[storyboard instantiateViewControllerWithIdentifier:@"tab"];
+        self.navigationController.navigationBarHidden=YES;
+        [self.navigationController pushViewController:obj animated:YES];
+    }
+   
+    return YES;
+}
+
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    
+    UITouch *touch = [[event allTouches] anyObject];
+    
+    if (![[touch view] isKindOfClass:[UITextField class]]) {
+        [self.view endEditing:YES];
+    }
+    [super touchesBegan:touches withEvent:event];
 }
 
 @end
