@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface GBCLoginViewController : UIViewController
-@property (weak, nonatomic) IBOutlet UIButton *loginButton;
+- (IBAction)loginButton:(UIButton *)sender;
 @end
  

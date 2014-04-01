@@ -13,8 +13,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    GBCXMPPManager *xmpp = [GBCXMPPManager sharedManager];
-    [xmpp connect];
+    //GBCXMPPManager *xmpp = [GBCXMPPManager sharedManager];
+    //[xmpp connect];
     // Override point for customization after application launch.
     
     return YES;
