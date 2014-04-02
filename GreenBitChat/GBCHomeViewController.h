@@ -10,6 +10,5 @@
 
 @interface GBCHomeViewController : UIViewController
 
-@property (weak, nonatomic) IBOutlet UIWebView *myWebView;
 
 @end
