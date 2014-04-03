@@ -2,13 +2,12 @@
   "images" : [
     {
       "idiom" : "universal",
-      "scale" : "1x",
-      "filename" : "friendactivity_refresh.png"
+      "scale" : "1x"
     },
     {
       "idiom" : "universal",
       "scale" : "2x",
-      "filename" : "friendactivity_refresh@2x.png"
+      "filename" : "1396530212_near_me.png"
     }
   ],
   "info" : {

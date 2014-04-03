@@ -123,13 +123,21 @@ static const int ddLogLevel = LOG_LEVEL_INFO;
         XMPPMessageArchiving_Contact_CoreDataObject *user = [[self fetchedResultsController] objectAtIndexPath:indexPath];
         label = (UILabel *)[cell viewWithTag:1];
         label.text = user.bareJidStr;
+        //label.text = user.
         
         label = (UILabel *)[cell viewWithTag:2];
         label.text = user.mostRecentMessageBody;
         label.numberOfLines = 2;
         
         label = (UILabel *)[cell viewWithTag:3];
-//        label.text = user.mostRecentMessageTimestamp;
+        
+        //TODO:判断隔天的信息
+        NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+        [formatter setDateFormat:@"HH:mm"];
+        //Optionally for time zone converstions
+        [formatter setTimeZone:[NSTimeZone timeZoneWithName:@"..."]];
+        label.text = [formatter stringFromDate: user.mostRecentMessageTimestamp];
+        
     }
     return cell;
 }
