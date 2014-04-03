@@ -170,6 +170,7 @@
 		0B396506180E6A9200AEA17A /* GreenBitChatTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B396505180E6A9200AEA17A /* GreenBitChatTests.m */; };
 		0B85699118EA471F004815C0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B85699018EA471F004815C0 /* Images.xcassets */; };
 		0B88420F18433A8300EE1797 /* GBCFindPeopleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B88420E18433A8300EE1797 /* GBCFindPeopleViewController.m */; };
+		0B8CC74918EC30EA0035D51D /* GBCCategoriesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B8CC74818EC30EA0035D51D /* GBCCategoriesViewController.m */; };
 		0B915EEA1820F2D000A709BF /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B915EE91820F2D000A709BF /* GCDAsyncSocket.m */; };
 		0B915EFC1820F2FD00A709BF /* DDAbstractDatabaseLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B915EED1820F2FD00A709BF /* DDAbstractDatabaseLogger.m */; };
 		0B915EFD1820F2FD00A709BF /* DDASLLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B915EEF1820F2FD00A709BF /* DDASLLogger.m */; };
@@ -500,6 +501,8 @@
 		0B85699018EA471F004815C0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		0B88420D18433A8200EE1797 /* GBCFindPeopleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GBCFindPeopleViewController.h; sourceTree = "<group>"; };
 		0B88420E18433A8300EE1797 /* GBCFindPeopleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GBCFindPeopleViewController.m; sourceTree = "<group>"; };
+		0B8CC74718EC30EA0035D51D /* GBCCategoriesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GBCCategoriesViewController.h; sourceTree = "<group>"; };
+		0B8CC74818EC30EA0035D51D /* GBCCategoriesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GBCCategoriesViewController.m; sourceTree = "<group>"; };
 		0B915EE81820F2D000A709BF /* GCDAsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDAsyncSocket.h; sourceTree = "<group>"; };
 		0B915EE91820F2D000A709BF /* GCDAsyncSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDAsyncSocket.m; sourceTree = "<group>"; };
 		0B915EEC1820F2FD00A709BF /* DDAbstractDatabaseLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDAbstractDatabaseLogger.h; sourceTree = "<group>"; };
@@ -765,6 +768,8 @@
 			children = (
 				0B1738951813BFFF00616295 /* GBCHomeViewController.h */,
 				0B1738961813BFFF00616295 /* GBCHomeViewController.m */,
+				0B8CC74718EC30EA0035D51D /* GBCCategoriesViewController.h */,
+				0B8CC74818EC30EA0035D51D /* GBCCategoriesViewController.m */,
 			);
 			name = Home;
 			sourceTree = "<group>";
@@ -1823,6 +1828,7 @@
 				0B33E72D1822428500743AD3 /* XMPPUserCoreDataStorageObject.m in Sources */,
 				0B33E7431822428500743AD3 /* XMPPRoomOccupantMemoryStorageObject.m in Sources */,
 				0B33E7571822428500743AD3 /* XMPPPubSub.m in Sources */,
+				0B8CC74918EC30EA0035D51D /* GBCCategoriesViewController.m in Sources */,
 				0B33E7671822428500743AD3 /* XMPPMessageArchiving_Contact_CoreDataObject.m in Sources */,
 				0B33E75D1822428500743AD3 /* XMPPMessage+XEP_0085.m in Sources */,
 				0BEB652C1820F99500A8578C /* XMPPDeprecatedPlainAuthentication.m in Sources */,

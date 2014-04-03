@@ -32,4 +32,10 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)openCategories:(UIBarButtonItem *)sender {
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    UITableViewController *obj=[storyboard instantiateViewControllerWithIdentifier:@"Categories"];
+    [self.navigationController pushViewController:obj animated:YES];
+
+}
 @end

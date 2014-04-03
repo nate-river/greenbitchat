@@ -1,0 +1,90 @@
+
+/* Class = "IBUISegmentedControl"; 0BB-ry-4KD.segmentTitles[0] = "推荐"; ObjectID = "0BB-ry-4KD"; */
+"0BB-ry-4KD.segmentTitles[0]" = "推荐";
+
+/* Class = "IBUISegmentedControl"; 0BB-ry-4KD.segmentTitles[1] = "附近"; ObjectID = "0BB-ry-4KD"; */
+"0BB-ry-4KD.segmentTitles[1]" = "附近";
+
+/* Class = "IBUIBarButtonItem"; title = "分类浏览"; ObjectID = "1Ee-kj-F1n"; */
+"1Ee-kj-F1n.title" = "分类浏览";
+
+/* Class = "IBUILabel"; text = "请输入手机收到的6位验证码"; ObjectID = "1Kg-bQ-EXn"; */
+"1Kg-bQ-EXn.text" = "请输入手机收到的6位验证码";
+
+/* Class = "IBUINavigationItem"; title = "绿巢网"; ObjectID = "1jI-eU-FIB"; */
+"1jI-eU-FIB.title" = "绿巢网";
+
+/* Class = "IBUILabel"; text = "昵称"; ObjectID = "2ub-tj-aew"; */
+"2ub-tj-aew.text" = "昵称";
+
+/* Class = "IBUILabel"; text = "人生的两大境界一是痛而不言"; ObjectID = "BJE-XE-Ots"; */
+"BJE-XE-Ots.text" = "人生的两大境界一是痛而不言";
+
+/* Class = "IBUILabel"; text = "昨天"; ObjectID = "C4u-Qa-KvJ"; */
+"C4u-Qa-KvJ.text" = "昨天";
+
+/* Class = "IBUIViewController"; title = "Message"; ObjectID = "CZ4-MO-1fc"; */
+"CZ4-MO-1fc.title" = "Message";
+
+/* Class = "IBUINavigationItem"; title = "联系人"; ObjectID = "Cld-6h-jIi"; */
+"Cld-6h-jIi.title" = "联系人";
+
+/* Class = "IBUITextField"; placeholder = "绿巢网注册邮箱"; ObjectID = "Ffk-wR-5Je"; */
+"Ffk-wR-5Je.placeholder" = "绿巢网注册邮箱";
+
+/* Class = "IBUILabel"; text = "招投标"; ObjectID = "GoD-cY-lyC"; */
+"GoD-cY-lyC.text" = "招投标";
+
+/* Class = "IBUILabel"; text = "交易市场"; ObjectID = "L4t-DT-VQo"; */
+"L4t-DT-VQo.text" = "交易市场";
+
+/* Class = "IBUIViewController"; title = "Contacts"; ObjectID = "QUy-BD-bpt"; */
+"QUy-BD-bpt.title" = "Contacts";
+
+/* Class = "IBUILabel"; text = "账号"; ObjectID = "Rbf-hE-4Yi"; */
+"Rbf-hE-4Yi.text" = "账号";
+
+/* Class = "IBUIButton"; normalTitle = "注册"; ObjectID = "V0f-Rq-4YK"; */
+"V0f-Rq-4YK.normalTitle" = "注册";
+
+/* Class = "IBUILabel"; text = "忘了密码？"; ObjectID = "dKe-82-Ois"; */
+"dKe-82-Ois.text" = "忘了密码？";
+
+/* Class = "IBUITextField"; placeholder = "必填"; ObjectID = "ia7-GM-SZu"; */
+"ia7-GM-SZu.placeholder" = "必填";
+
+/* Class = "IBUIBarButtonItem"; title = "取消"; ObjectID = "idX-lr-AOY"; */
+"idX-lr-AOY.title" = "取消";
+
+/* Class = "IBUINavigationItem"; title = "信息"; ObjectID = "jt0-ms-biQ"; */
+"jt0-ms-biQ.title" = "信息";
+
+/* Class = "IBUILabel"; text = "主页"; ObjectID = "k9v-vh-Pg5"; */
+"k9v-vh-Pg5.text" = "主页";
+
+/* Class = "IBUIBarButtonItem"; title = "下一步"; ObjectID = "nlX-ZV-xm0"; */
+"nlX-ZV-xm0.title" = "下一步";
+
+/* Class = "IBUILabel"; text = "请输入您的手机号码："; ObjectID = "ny1-oS-r21"; */
+"ny1-oS-r21.text" = "请输入您的手机号码：";
+
+/* Class = "IBUILabel"; text = "密码"; ObjectID = "qfd-wW-z4b"; */
+"qfd-wW-z4b.text" = "密码";
+
+/* Class = "IBUILabel"; text = "群组"; ObjectID = "qqV-6V-bH2"; */
+"qqV-6V-bH2.text" = "群组";
+
+/* Class = "IBUILabel"; text = "问答"; ObjectID = "r40-eI-sqn"; */
+"r40-eI-sqn.text" = "问答";
+
+/* Class = "IBUINavigationItem"; title = "绿巢网"; ObjectID = "sWD-pM-aRh"; */
+"sWD-pM-aRh.title" = "绿巢网";
+
+/* Class = "IBUILabel"; text = "领域"; ObjectID = "t0m-k4-HSW"; */
+"t0m-k4-HSW.text" = "领域";
+
+/* Class = "IBUIButton"; normalTitle = "注册新账号"; ObjectID = "vpr-Vy-6Mh"; */
+"vpr-Vy-6Mh.normalTitle" = "注册新账号";
+
+/* Class = "IBUILabel"; text = "逗乐的"; ObjectID = "wzq-Gm-4uP"; */
+"wzq-Gm-4uP.text" = "逗乐的";

@@ -10,5 +10,6 @@
 
 @interface GBCHomeViewController : UIViewController
 
+- (IBAction)openCategories:(UIBarButtonItem *)sender;
 
 @end
