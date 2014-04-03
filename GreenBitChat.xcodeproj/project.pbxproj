@@ -154,6 +154,7 @@
 		0B33E7771822428500743AD3 /* XMPPMessage+XEP_0224.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B33E71D1822428500743AD3 /* XMPPMessage+XEP_0224.m */; };
 		0B33E7781822428500743AD3 /* NSXMLElement+XEP_0297.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B33E7201822428500743AD3 /* NSXMLElement+XEP_0297.m */; };
 		0B33E7791822428500743AD3 /* XMPPMessage+XEP_0308.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B33E7231822428500743AD3 /* XMPPMessage+XEP_0308.m */; };
+		0B34338318ED7E9900E3BAAB /* GBCHotStoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B34338118ED7E9900E3BAAB /* GBCHotStoryViewController.m */; };
 		0B3964D8180E6A9200AEA17A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B3964D7180E6A9200AEA17A /* Foundation.framework */; };
 		0B3964DA180E6A9200AEA17A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B3964D9180E6A9200AEA17A /* CoreGraphics.framework */; };
 		0B3964DC180E6A9200AEA17A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B3964DB180E6A9200AEA17A /* UIKit.framework */; };
@@ -478,6 +479,8 @@
 		0B33E7201822428500743AD3 /* NSXMLElement+XEP_0297.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSXMLElement+XEP_0297.m"; sourceTree = "<group>"; };
 		0B33E7221822428500743AD3 /* XMPPMessage+XEP_0308.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XMPPMessage+XEP_0308.h"; sourceTree = "<group>"; };
 		0B33E7231822428500743AD3 /* XMPPMessage+XEP_0308.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "XMPPMessage+XEP_0308.m"; sourceTree = "<group>"; };
+		0B34338018ED7E9900E3BAAB /* GBCHotStoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GBCHotStoryViewController.h; sourceTree = "<group>"; };
+		0B34338118ED7E9900E3BAAB /* GBCHotStoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GBCHotStoryViewController.m; sourceTree = "<group>"; };
 		0B3964D4180E6A9200AEA17A /* GreenBitChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GreenBitChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B3964D7180E6A9200AEA17A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		0B3964D9180E6A9200AEA17A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -770,6 +773,8 @@
 				0B1738961813BFFF00616295 /* GBCHomeViewController.m */,
 				0B8CC74718EC30EA0035D51D /* GBCCategoriesViewController.h */,
 				0B8CC74818EC30EA0035D51D /* GBCCategoriesViewController.m */,
+				0B34338018ED7E9900E3BAAB /* GBCHotStoryViewController.h */,
+				0B34338118ED7E9900E3BAAB /* GBCHotStoryViewController.m */,
 			);
 			name = Home;
 			sourceTree = "<group>";
@@ -1789,6 +1794,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B34338318ED7E9900E3BAAB /* GBCHotStoryViewController.m in Sources */,
 				0B17388D1810D8FC00616295 /* GBCChatWindowViewController.m in Sources */,
 				0B915EFE1820F2FD00A709BF /* DDFileLogger.m in Sources */,
 				0B33E7281822428500743AD3 /* XMPPReconnect.m in Sources */,

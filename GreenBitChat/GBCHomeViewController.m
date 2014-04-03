@@ -7,7 +7,7 @@
 //
 
 #import "GBCHomeViewController.h"
-//#import "GBCDongTaiViewController.h"
+#import "GBCHotStoryViewController.h"
 //#import "GBCFindPeopleViewController.h"
 
 @interface GBCHomeViewController ()
@@ -85,4 +85,23 @@
     [self.navigationController pushViewController:obj animated:YES];
 
 }
+
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"showHotStory"])
+    {
+        GBCHotStoryViewController *destViewController = segue.destinationViewController;
+        
+        //destViewController.bareJidStr = user.jidStr;
+        //destViewController.displayName = user.displayName;
+        
+        //destViewController.messages = tmp;
+        //destViewController.timestamps = tmp2;
+        
+        destViewController.hidesBottomBarWhenPushed = YES;
+    }
+    
+}
+
 @end

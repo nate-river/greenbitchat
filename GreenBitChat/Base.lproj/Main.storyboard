@@ -542,10 +542,10 @@
             </objects>
             <point key="canvasLocation" x="-872" y="1339"/>
         </scene>
-        <!--View Controller-->
+        <!--Hot Story View Controller-->
         <scene sceneID="yWU-L9-O4Q">
             <objects>
-                <viewController id="Pkw-Cb-IBP" sceneMemberID="viewController">
+                <viewController id="Pkw-Cb-IBP" customClass="GBCHotStoryViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="375-eY-GO3"/>
                         <viewControllerLayoutGuide type="bottom" id="S84-p6-x5D"/>
@@ -554,53 +554,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="e3a-kx-tnZ">
-                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pec-CD-F76">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <subviews>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XnA-8A-mtW">
-                                        <rect key="frame" x="139" y="11" width="42" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <color key="textColor" red="0.60000002384185791" green="0.60000002384185791" blue="0.60000002384185791" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="美国人民的生活质量到底是比中国人好多少" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="AAd-Gl-8p8">
-                                        <rect key="frame" x="20" y="40" width="280" height="46"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Jt-WX-o38">
-                                        <rect key="frame" x="100" y="85" width="120" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <color key="textColor" red="0.50196081399917603" green="0.50196081399917603" blue="0.50196081399917603" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="ouK-Sg-MgS">
-                                        <rect key="frame" x="20" y="119" width="280" height="198"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <string key="text">人类首次从理论上阐述荧光现象是在1852年，当时Stokes提出了被后人称为Stokes
-荧光增白剂CBS分子式
-荧光增白剂CBS分子式
-定律的理论。1921年Lagorio观察到荧光染料发出的可见荧光能量高于它所吸收的可见光能量，为此，他推论：荧光染料具有将不可见的紫外光转换为可见荧光的能力。他还发现天然纤维的白度可通过用荧光物质的水溶液处理而提高。1929年Krais 采用Lagorio的原理证明，将泛黄色的人造丝浸入到6,7-二羟基香豆素配糖体的溶液中，干燥后发现该人造丝的白度有了很明显的提高。
-荧光增白剂的飞速发展，使得有人将此与活性染料和有机颜料DPP的问世并列为染料界在20世纪后期的三大成就。
-许多行业都开始使用荧光增白剂，例如纸张、塑料、皮革、洗涤剂。同时在许多高科技的领域内也在使用荧光增白剂，例如荧光探测、染料激光器、防伪印刷等，甚至是高空摄影用的高感光度胶片为提高感光胶乳的感光度，也会使用荧光增白剂。
-在中国，荧光增白剂最先是被划分为印染助剂类产品，然后又被划分为染料类产品。由于其特有性质和大量的用量需求，其已于上述两个行业分开，成为单独的一类精细化工产品。目前国内，荧光增白剂的第一大用户是洗涤剂，第二大用户是纸张，纺织品为第三大用户。</string>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="h6Q-vi-XOA"/>
+                    <connections>
+                        <outlet property="hotStoryScrollView" destination="pec-CD-F76" id="oaI-bF-1PU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ivs-5c-CQK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2659" y="1504"/>
+            <point key="canvasLocation" x="2763" y="1462"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Vex-rW-GRa">
@@ -671,11 +639,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="88" id="ZYh-SI-Ihz">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="88" id="ZYh-SI-Ihz">
                                 <rect key="frame" x="0.0" y="86" width="320" height="88"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ZYh-SI-Ihz" id="NiL-2a-F9A">
-                                    <rect key="frame" x="0.0" y="0.0" width="287" height="87"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="87"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="新中国的环保行业到底有什么优势之我的简介？" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="246" translatesAutoresizingMaskIntoConstraints="NO" id="jzf-fM-h70">
@@ -708,7 +676,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="Pkw-Cb-IBP" kind="push" id="BlF-ca-nPB"/>
+                                    <segue destination="Pkw-Cb-IBP" kind="push" identifier="showHotStory" id="cvK-ct-Dws"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -936,7 +904,6 @@
         <image name="demo-avatar-jobs" width="512" height="512"/>
         <image name="dynamic" width="24" height="24"/>
         <image name="group" width="24" height="24"/>
-        <image name="home" width="24" height="24"/>
         <image name="home" width="24" height="24"/>
         <image name="login" width="292" height="101"/>
         <image name="lvxin" width="256" height="256"/>
