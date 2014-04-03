@@ -1329,6 +1329,7 @@
 		0B3964DD180E6A9200AEA17A /* GreenBitChat */ = {
 			isa = PBXGroup;
 			children = (
+				0B85699018EA471F004815C0 /* Images.xcassets */,
 				0B8D11311845EDAF003E86A2 /* View */,
 				0BE2819B184342C000B2F845 /* Model */,
 				0B8D11301845ED7D003E86A2 /* Controller */,
@@ -1340,7 +1341,6 @@
 		0B3964DE180E6A9200AEA17A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				0B85699018EA471F004815C0 /* Images.xcassets */,
 				0B3964E3180E6A9200AEA17A /* main.m */,
 				0B3964E6180E6A9200AEA17A /* GBCAppDelegate.h */,
 				0B3964E7180E6A9200AEA17A /* GBCAppDelegate.m */,

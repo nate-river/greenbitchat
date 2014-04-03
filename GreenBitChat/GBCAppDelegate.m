@@ -16,7 +16,7 @@
     //GBCXMPPManager *xmpp = [GBCXMPPManager sharedManager];
     //[xmpp connect];
     // Override point for customization after application launch.
-    
+    [self.window setTintColor:[UIColor blackColor]];
     return YES;
 }
 							

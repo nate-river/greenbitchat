@@ -14,13 +14,18 @@
 
 @implementation GBCPersonalViewController
 
+- (id)initWithStyle:(UITableViewStyle)style
+{
+    self = [super initWithStyle:style];
+    if (self) {
+        // Custom initialization
+    }
+    return self;
+}
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // 从 URL 中载入一个 html 页面
-    NSURL *url = [NSURL URLWithString:@"http://localhost/Iphone/index"];
-    [self.myWebView loadRequest:[NSURLRequest requestWithURL:url]];
 	// Do any additional setup after loading the view.
 }
 - (void)didReceiveMemoryWarning

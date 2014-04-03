@@ -8,6 +8,5 @@
 
 #import <UIKit/UIKit.h>
 
-@interface GBCPersonalViewController : UIViewController
-@property (weak, nonatomic) IBOutlet UIWebView *myWebView;
+@interface GBCPersonalViewController : UITableViewController
 @end
