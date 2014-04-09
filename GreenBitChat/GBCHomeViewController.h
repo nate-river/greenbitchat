@@ -11,5 +11,5 @@
 @interface GBCHomeViewController : UITableViewController
 
 - (IBAction)openCategories:(UIBarButtonItem *)sender;
-
+@property (nonatomic, strong) NSString *cellType;
 @end

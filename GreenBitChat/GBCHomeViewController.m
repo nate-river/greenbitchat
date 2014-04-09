@@ -16,6 +16,7 @@
 
 @implementation GBCHomeViewController
 
+
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
@@ -58,13 +59,38 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
+    if ( [self.cellType isEqualToString:@"group"] )
+    {
+        static NSString *CellIdentifier = @"group";
+         UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+        return cell;
+    }
+    else if ( [self.cellType isEqualToString:@"bid"] )
+    {
+        static NSString *CellIdentifier = @"bid";
+        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+        return cell;
+    }
+    else if ( [self.cellType isEqualToString:@"question"] )
+    {
+        static NSString *CellIdentifier = @"question";
+        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+        return cell;
+    }
+    else if ( [self.cellType isEqualToString:@"trade"] )
+    {
+        static NSString *CellIdentifier = @"trade";
+        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+        return cell;
+    }
+    
+    static NSString *CellIdentifier = @"home";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    return cell;
     
     // Configure the cell...
-    
-    return cell;
 }
+
 // Override to support editing the table view.
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
